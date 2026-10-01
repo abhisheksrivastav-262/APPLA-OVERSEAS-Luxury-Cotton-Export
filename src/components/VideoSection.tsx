@@ -23,7 +23,7 @@ export function VideoSection() {
             <Clapperboard size={15} /> Our Story on Film
           </p>
           <h2 className="mt-4 font-display text-3xl md:text-[44px] text-white font-semibold">Inside Appla Overseas</h2>
-          <p className="mt-3 text-white/60 text-[15px]">Yarn to container — watch how Vovika bedding is crafted for the world.</p>
+          <p className="mt-3 text-white/60 text-[15px]">Yarn to container — watch how Wovica bedding is crafted for the world.</p>
         </Reveal>
         <Reveal>
           {hasVideo === null ? (

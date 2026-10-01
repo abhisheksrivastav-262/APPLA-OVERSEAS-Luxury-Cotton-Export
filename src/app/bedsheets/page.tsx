@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ProductCard, VovikaMark } from "@/components/ProductCard";
+import { ProductCard, WovicaMark } from "@/components/ProductCard";
 import { BEDSHEET_TYPES, PRODUCTS, IMAGES, SITE } from "@/data/site";
 
-export const metadata = { title: "Types of Bedsheets | Vovika – APPLA OVERSEAS", description: "Premium pure cotton, satin, percale, combed cotton, silk & microfiber bedsheets – manufacturer & exporter." };
+export const metadata = { title: "Types of Bedsheets | Wovica – APPLA OVERSEAS", description: "Premium pure cotton, satin, percale, combed cotton, silk & microfiber bedsheets – manufacturer & exporter." };
 
 export default function BedsheetsPage() {
   const sheets = PRODUCTS.filter((p) => p.category === "Bedsheets");
@@ -16,7 +16,7 @@ export default function BedsheetsPage() {
         <div className="absolute inset-0 bg-[#060f24]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
           <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-[#C9A24B]/40 text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase"><VovikaMark small /> Bedsheet Guide</span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-[#C9A24B]/40 text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase"><WovicaMark small /> Bedsheet Guide</span>
             <h1 className="mt-4 font-display text-4xl md:text-6xl text-white font-semibold">Types of Bedsheets</h1>
             <p className="mt-3 text-white/65 max-w-2xl">Appla Overseas ek agrani home textile manufacturer aur exporter hai — har weave, har budget ke liye bedsheet.</p>
           </Reveal>

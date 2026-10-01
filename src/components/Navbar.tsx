@@ -8,7 +8,7 @@ import { SITE } from "@/data/site";
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/vovika", label: "Vovika Brand" },
+  { href: "/wovica", label: "Wovica Brand" },
   { href: "/products", label: "Products" },
   { href: "/bedsheets", label: "Bedsheet Types" },
   { href: "/manufacturing", label: "Manufacturing" },
@@ -23,7 +23,7 @@ const LINKS = [
 const DESK = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/vovika", label: "Vovika" },
+  { href: "/wovica", label: "Wovica" },
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/export", label: "Export" },
@@ -82,7 +82,7 @@ export default function Navbar() {
             </div>
             <div className="leading-tight">
               <p className="font-display font-bold tracking-[0.18em] text-[15px] gold-text">APPLA OVERSEAS</p>
-              <p className={`text-[10px] tracking-[0.22em] uppercase ${solid ? "text-[#A8822E]" : "text-[#E8C97A] drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]"}`}>Vovika • Luxury Cotton Export</p>
+              <p className={`text-[10px] tracking-[0.22em] uppercase ${solid ? "text-[#A8822E]" : "text-[#E8C97A] drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]"}`}>Wovica • Luxury Cotton Export</p>
             </div>
           </Link>
 
@@ -122,7 +122,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-5 py-4 bg-[#060f24] border-b border-[#C9A24B]/30">
           <div>
             <p className="font-display font-bold tracking-[0.18em] text-[14px] gold-text">APPLA OVERSEAS</p>
-            <p className="text-[10px] tracking-[0.22em] uppercase text-[#E8C97A]/80">Vovika • Luxury Cotton Export</p>
+            <p className="text-[10px] tracking-[0.22em] uppercase text-[#E8C97A]/80">Wovica • Luxury Cotton Export</p>
           </div>
           <button onClick={() => setOpen(false)} aria-label="Close menu" className="w-11 h-11 grid place-items-center rounded-full bg-white/10 text-[#E8C97A] border border-[#C9A24B]/40 active:scale-95 transition-transform">
             <X size={20} />

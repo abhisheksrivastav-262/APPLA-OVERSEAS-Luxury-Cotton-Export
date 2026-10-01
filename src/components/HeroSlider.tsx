@@ -50,7 +50,7 @@ export function HeroSlider({ items }: { items: Product[] }) {
       </div>
 
       <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6">
-        <p className="text-[11px] tracking-[0.25em] uppercase text-[#E8C97A] font-semibold">{p.category} • Vovika Range</p>
+        <p className="text-[11px] tracking-[0.25em] uppercase text-[#E8C97A] font-semibold">{p.category} • Wovica Range</p>
         <AnimatePresence mode="wait">
           <motion.h3
             key={p.slug + "-t"}

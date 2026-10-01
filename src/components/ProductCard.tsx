@@ -3,10 +3,10 @@ import { ArrowRight } from "lucide-react";
 import type { Product } from "@/data/site";
 import { BuyButton } from "./BuyModal";
 
-export function VovikaMark({ small = false }: { small?: boolean }) {
+export function WovicaMark({ small = false }: { small?: boolean }) {
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full bg-[#060f24] border border-[#C9A24B]/50 ${small ? "px-2.5 py-1" : "px-3.5 py-1.5"}`}>
-      <span className={`font-display font-bold tracking-[0.2em] gold-text ${small ? "text-[10px]" : "text-[12px]"}`}>VOVIKA</span>
+      <span className={`font-display font-bold tracking-[0.2em] gold-text ${small ? "text-[10px]" : "text-[12px]"}`}>WOVICA</span>
     </span>
   );
 }
@@ -19,7 +19,7 @@ export function ProductCard({ p }: { p: Product }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#060f24]/55 via-transparent to-transparent" />
         {p.badge && <span className="absolute top-4 left-4 max-w-[60%] px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] shadow-lg leading-tight">{p.badge}</span>}
         <span className="absolute top-4 right-4 px-3 py-1.5 rounded-full text-[11px] font-semibold glass text-[#0A1A3C] border border-white/40">Export Quality</span>
-        <span className="absolute bottom-3 left-4"><VovikaMark small /></span>
+        <span className="absolute bottom-3 left-4"><WovicaMark small /></span>
       </div>
       <div className="p-6">
         <p className="text-[11px] tracking-[0.25em] uppercase text-[#A8822E] font-semibold">{p.category}</p>

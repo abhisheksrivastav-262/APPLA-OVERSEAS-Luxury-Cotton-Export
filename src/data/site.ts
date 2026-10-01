@@ -1,10 +1,10 @@
 export const SITE = {
   name: "APPLA OVERSEAS",
   parentLine: "Appla Overseas — Parent Manufacturing Company",
-  brand: "Vovika",
-  brandLine: "Vovika — Our Premium Home Textile Range",
+  brand: "Wovica",
+  brandLine: "Wovica — Our Premium Home Textile Range",
   brandQuote:
-    "Appla Overseas is a world-class textile manufacturing company committed to global quality standards. Under our premium brand Vovika, we bring an exquisite range of bedsheets, comforters, protectors, and bedcovers crafted for international markets.",
+    "Appla Overseas is a world-class textile manufacturing company committed to global quality standards. Under our premium brand Wovica, we bring an exquisite range of bedsheets, comforters, protectors, and bedcovers crafted for international markets.",
   owner: "Ravindra Singhwal",
   founded: 2006,
   experience: "20+ Years",
@@ -90,16 +90,16 @@ export const PRODUCTS: Product[] = [
   { slug: "euro-sham-cushion-set", title: "Euro Sham + Cushion Accent Set", category: "Pillows", image: img("1615874959474-d609969a20ed", 1000), material: "Cotton Canvas", sizes: "26\"x26\" + 18\"x18\"", gsm: "180 GSM", moq: "1500 Sets", desc: "Designer shams for home-textile retailers and staging companies." },
   { slug: "export-overstock-deal", title: "Container-Ready Assorted Lot", category: "OEM", image: img("1578575437130-527eed3abbec", 1000), material: "Mixed Cotton", sizes: "Assorted", gsm: "Mixed", moq: "1x40HQ", badge: "Bulk", desc: "Best landed-cost option – mixed designs for discount chains." },
   // ---- Bedsheet types ----
-  { slug: "vovika-pure-cotton-bedsheet", title: "Vovika Pure Cotton Bedsheet", category: "Bedsheets", image: img("1522771739844-6a9f6d5f14af", 1000), material: "100% Pure Cotton", sizes: "King / Queen / Twin", gsm: "144 TC • 140 GSM", moq: "500 Sets", badge: "Best Manufacturing Company", desc: "Our flagship everyday luxury – breathable pure cotton with a soft peach finish." },
-  { slug: "vovika-satin-bedsheet", title: "Premium Satin Bedsheet", category: "Bedsheets", image: img("1615874959474-d609969a20ed", 1000), material: "Cotton Satin", sizes: "King / Queen", gsm: "300–400 TC", moq: "500 Sets", badge: "Premium", desc: "Silky sateen weave with a rich sheen – the 5-star hotel favourite." },
-  { slug: "vovika-percale-bedsheet", title: "Crisp Percale Bedsheet", category: "Bedsheets", image: img("1631049307264-da0ec9d70304", 1000), material: "100% Cotton Percale", sizes: "All Sizes + Custom", gsm: "200–300 TC", moq: "800 Sets", desc: "Cool, crisp matte percale that gets softer with every wash." },
-  { slug: "vovika-combed-cotton-bedsheet", title: "Combed Cotton Bedsheet", category: "Bedsheets", image: img("1505693416388-ac5ce068fe85", 1000), material: "Combed Cotton", sizes: "King / Queen / Twin", gsm: "180–250 TC", moq: "800 Sets", desc: "Combed fibres remove impurities – stronger, smoother, colour-fast." },
-  { slug: "vovika-silk-bedsheet", title: "Premium Silk Bedsheet", category: "Bedsheets", image: img("1540518614846-7eded433c457", 1000), material: "Premium Silk Blend", sizes: "Queen / King", gsm: "22 Momme", moq: "300 Sets", badge: "Luxury", desc: "Ultra-premium silk-touch bedsheet for boutique and palace hotels." },
-  { slug: "vovika-microfiber-bedsheet", title: "Soft Microfiber Bedsheet", category: "Bedsheets", image: img("1595526114035-0d45ed16cfbf", 1000), material: "Brushed Microfiber", sizes: "All Sizes", gsm: "110 GSM", moq: "1000 Sets", desc: "Wrinkle-resistant, quick-dry microfiber at sharp container pricing." },
+  { slug: "wovika-pure-cotton-bedsheet", title: "Wovica Pure Cotton Bedsheet", category: "Bedsheets", image: img("1522771739844-6a9f6d5f14af", 1000), material: "100% Pure Cotton", sizes: "King / Queen / Twin", gsm: "144 TC • 140 GSM", moq: "500 Sets", badge: "Best Manufacturing Company", desc: "Our flagship everyday luxury – breathable pure cotton with a soft peach finish." },
+  { slug: "wovika-satin-bedsheet", title: "Premium Satin Bedsheet", category: "Bedsheets", image: img("1615874959474-d609969a20ed", 1000), material: "Cotton Satin", sizes: "King / Queen", gsm: "300–400 TC", moq: "500 Sets", badge: "Premium", desc: "Silky sateen weave with a rich sheen – the 5-star hotel favourite." },
+  { slug: "wovika-percale-bedsheet", title: "Crisp Percale Bedsheet", category: "Bedsheets", image: img("1631049307264-da0ec9d70304", 1000), material: "100% Cotton Percale", sizes: "All Sizes + Custom", gsm: "200–300 TC", moq: "800 Sets", desc: "Cool, crisp matte percale that gets softer with every wash." },
+  { slug: "wovika-combed-cotton-bedsheet", title: "Combed Cotton Bedsheet", category: "Bedsheets", image: img("1505693416388-ac5ce068fe85", 1000), material: "Combed Cotton", sizes: "King / Queen / Twin", gsm: "180–250 TC", moq: "800 Sets", desc: "Combed fibres remove impurities – stronger, smoother, colour-fast." },
+  { slug: "wovika-silk-bedsheet", title: "Premium Silk Bedsheet", category: "Bedsheets", image: img("1540518614846-7eded433c457", 1000), material: "Premium Silk Blend", sizes: "Queen / King", gsm: "22 Momme", moq: "300 Sets", badge: "Luxury", desc: "Ultra-premium silk-touch bedsheet for boutique and palace hotels." },
+  { slug: "wovika-microfiber-bedsheet", title: "Soft Microfiber Bedsheet", category: "Bedsheets", image: img("1595526114035-0d45ed16cfbf", 1000), material: "Brushed Microfiber", sizes: "All Sizes", gsm: "110 GSM", moq: "1000 Sets", desc: "Wrinkle-resistant, quick-dry microfiber at sharp container pricing." },
   // ---- Bedcovers ----
-  { slug: "vovika-jacquard-bedcover", title: "Jacquard Woven Bedcover", category: "Bedcovers", image: img("1567016432779-094069958ea5", 1000), material: "Cotton Jacquard", sizes: "King / Queen", gsm: "220 GSM", moq: "500 Sets", badge: "Premium", desc: "Woven jacquard patterns – no print, texture that lasts decades." },
-  { slug: "vovika-printed-bedcover", title: "Printed Quilted Bedcover", category: "Bedcovers", image: img("1528459801416-a9e53bbf4e17", 1000), material: "Cotton + Fill", sizes: "King / Queen", gsm: "180 GSM + Fill", moq: "500 Sets", desc: "Quilted printed bedcovers with diamond stitching and piped edges." },
-  { slug: "vovika-patchwork-bedcover", title: "Patchwork Bedcover", category: "Bedcovers", image: img("1523381210434-271e8be1f52b", 1000), material: "Cotton Patchwork", sizes: "Queen / King", gsm: "200 GSM", moq: "500 Sets", desc: "Hand-look patchwork panels – a handicraft story for global retail." },
+  { slug: "wovika-jacquard-bedcover", title: "Jacquard Woven Bedcover", category: "Bedcovers", image: img("1567016432779-094069958ea5", 1000), material: "Cotton Jacquard", sizes: "King / Queen", gsm: "220 GSM", moq: "500 Sets", badge: "Premium", desc: "Woven jacquard patterns – no print, texture that lasts decades." },
+  { slug: "wovika-printed-bedcover", title: "Printed Quilted Bedcover", category: "Bedcovers", image: img("1528459801416-a9e53bbf4e17", 1000), material: "Cotton + Fill", sizes: "King / Queen", gsm: "180 GSM + Fill", moq: "500 Sets", desc: "Quilted printed bedcovers with diamond stitching and piped edges." },
+  { slug: "wovika-patchwork-bedcover", title: "Patchwork Bedcover", category: "Bedcovers", image: img("1523381210434-271e8be1f52b", 1000), material: "Cotton Patchwork", sizes: "Queen / King", gsm: "200 GSM", moq: "500 Sets", desc: "Hand-look patchwork panels – a handicraft story for global retail." },
 ];
 
 export const STATS = [
@@ -116,7 +116,7 @@ export const TESTIMONIALS = [
   { name: "James Carter", role: "Procurement Head, Hotel Group – USA", text: "APPLA's 400TC sheets survived 200+ commercial washes with zero pilling. Our guest satisfaction scores on bedding jumped 31%.", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" },
   { name: "Sophie Müller", role: "Founder, Home Retail – Germany", text: "Flawless OEM execution. Custom sizes, German labelling, on-time Hamburg delivery. Our returns dropped to under 1%.", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" },
   { name: "Ahmed Al Farsi", role: "Importer, Dubai – UAE", text: "Breathable protectors built for Gulf heat. Packaging, barcodes, documentation – everything export-ready. True professionals.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" },
-  { name: "Emily Thompson", role: "Buyer, Boutique Stores – UK", text: "The reversible comforters are our best-seller three seasons running. Luxury hand-feel at a landed cost that works.", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" },
+  { name: "Emily Thompson", role: "Buyer, Boutique Stores – UK", text: "The reversible comforters are our top reorder three seasons running. Luxury hand-feel at a landed cost that works.", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" },
 ];
 
 export const FAQS = [

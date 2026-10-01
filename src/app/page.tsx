@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Stats } from "@/components/Stats";
-import { ProductCard, VovikaMark } from "@/components/ProductCard";
+import { ProductCard, WovicaMark } from "@/components/ProductCard";
 import { HeroSlider } from "@/components/HeroSlider";
 import { VideoSection } from "@/components/VideoSection";
 import { IMAGES, PRODUCTS, COUNTRIES, TESTIMONIALS, FAQS, SITE, CERTIFICATIONS } from "@/data/site";
@@ -16,19 +16,19 @@ const fadeUp = { initial: { opacity: 0, y: 34 }, animate: { opacity: 1, y: 0 } }
 export default function Home() {
   const sliderItems = [
     "signature-400tc-white-bedsheet",
-    "vovika-satin-bedsheet",
+    "wovika-satin-bedsheet",
     "down-comforter-500tc",
     "waterproof-mattress-protector",
-    "vovika-jacquard-bedcover",
+    "wovika-jacquard-bedcover",
   ].map((s) => PRODUCTS.find((p) => p.slug === s)!).filter(Boolean);
   const featured = [
-    "vovika-pure-cotton-bedsheet",
+    "wovika-pure-cotton-bedsheet",
     "down-comforter-500tc",
     "waterproof-mattress-protector",
-    "vovika-jacquard-bedcover",
+    "wovika-jacquard-bedcover",
     "hotel-stripe-bedsheet",
     "terry-pillow-protector-pair",
-    "vovika-percale-bedsheet",
+    "wovika-percale-bedsheet",
     "oem-private-label",
   ].map((s) => PRODUCTS.find((p) => p.slug === s)!).filter(Boolean);
   const [faqOpen, setFaqOpen] = useState<number | null>(0);
@@ -76,20 +76,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VOVIKA BRAND BAND */}
+      {/* WOVICA BRAND BAND */}
       <section className="bg-gradient-to-r from-[#060f24] via-[#0A1A3C] to-[#060f24] border-b border-[#C9A24B]/25">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 py-10 grid lg:grid-cols-[auto_1fr_auto] gap-6 items-center">
           <Reveal className="text-center lg:text-left">
             <p className="text-[11px] tracking-[0.3em] uppercase text-white/50">Introducing</p>
-            <p className="font-display font-bold tracking-[0.2em] text-4xl sm:text-5xl gold-text">VOVIKA</p>
+            <p className="font-display font-bold tracking-[0.2em] text-4xl sm:text-5xl gold-text">WOVICA</p>
             <p className="mt-1 text-[12px] tracking-[0.2em] uppercase text-[#E8C97A]/80">Our Premium Home Textile Range</p>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="font-display text-[16px] sm:text-lg text-white/85 leading-relaxed text-center lg:text-left">“{SITE.brandQuote}”</p>
           </Reveal>
           <Reveal delay={0.15} className="text-center">
-            <Link href="/vovika" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] font-semibold text-[14px] min-h-[52px]">
-              Explore Vovika <ArrowRight size={17} />
+            <Link href="/wovica" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] font-semibold text-[14px] min-h-[52px]">
+              Explore Wovica <ArrowRight size={17} />
             </Link>
           </Reveal>
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
       {/* 4. PRODUCT SLIDER */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading eyebrow="Signature Collection" title="Luxury pieces global buyers reorder" sub="Export-tested bestsellers across bedsheets, comforters, protectors and hotel systems." />
+          <SectionHeading eyebrow="Signature Collection" title="Luxury pieces global buyers reorder" sub="Export-tested luxury pieces across bedsheets, comforters, protectors and hotel systems." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featured.map((p) => <Reveal key={p.slug}><ProductCard p={p} /></Reveal>)}
           </div>

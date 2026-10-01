@@ -16,7 +16,7 @@ export default function CertificationsPage() {
           <Reveal>
             <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">Export ka sabse bada hathiyar</p>
             <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold">Quality & Certifications</h1>
-            <p className="mt-3 text-white/65 max-w-2xl">Certificates with big logos — proof that Vovika textiles meet world standards.</p>
+            <p className="mt-3 text-white/65 max-w-2xl">Certificates with big logos — proof that Wovica textiles meet world standards.</p>
           </Reveal>
         </div>
       </section>

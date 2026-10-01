@@ -3,7 +3,7 @@ import { ArrowRight, Target, Eye, Factory, Users, Leaf, Package } from "lucide-r
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Stats } from "@/components/Stats";
-import { VovikaMark } from "@/components/ProductCard";
+import { WovicaMark } from "@/components/ProductCard";
 import { IMAGES, SITE } from "@/data/site";
 
 export const metadata = { title: "About Us | APPLA OVERSEAS", description: "About APPLA OVERSEAS – premium cotton textile manufacturer & exporter from Muzaffarnagar, India." };
@@ -18,8 +18,8 @@ export default function About() {
           <Reveal>
             <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">About Us • Est. 2006</p>
             <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold max-w-3xl">The house behind the world&apos;s softest cotton.</h1>
-            <p className="mt-4 text-white/65 max-w-2xl">Established in 2006 in Muzaffarnagar by {SITE.owner} — 20+ years of textile-sector experience behind Appla Overseas, parent company of flagship premium brand <span className="text-[#E8C97A] font-semibold">Vovika</span>.</p>
-            <div className="mt-6"><VovikaMark /></div>
+            <p className="mt-4 text-white/65 max-w-2xl">Established in 2006 in Muzaffarnagar by {SITE.owner} — 20+ years of textile-sector experience behind Appla Overseas, parent company of flagship premium brand <span className="text-[#E8C97A] font-semibold">Wovica</span>.</p>
+            <div className="mt-6"><WovicaMark /></div>
           </Reveal>
         </div>
       </section>
