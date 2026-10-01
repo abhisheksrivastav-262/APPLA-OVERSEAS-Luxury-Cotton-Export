@@ -3,6 +3,7 @@ import { ArrowRight, Target, Eye, Factory, Users, Leaf, Package } from "lucide-r
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Stats } from "@/components/Stats";
+import { VovikaMark } from "@/components/ProductCard";
 import { IMAGES, SITE } from "@/data/site";
 
 export const metadata = { title: "About Us | APPLA OVERSEAS", description: "About APPLA OVERSEAS – premium cotton textile manufacturer & exporter from Muzaffarnagar, India." };
@@ -15,10 +16,22 @@ export default function About() {
         <div className="absolute inset-0 bg-[#060f24]/78" />
         <div className="relative max-w-7xl mx-auto px-6">
           <Reveal>
-            <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">About Us</p>
+            <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">About Us • Est. 2006</p>
             <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold max-w-3xl">The house behind the world&apos;s softest cotton.</h1>
-            <p className="mt-4 text-white/65 max-w-2xl">Founded in Muzaffarnagar by {SITE.owner}, APPLA OVERSEAS blends Indian cotton heritage with export-grade engineering.</p>
+            <p className="mt-4 text-white/65 max-w-2xl">Established in 2006 in Muzaffarnagar by {SITE.owner} — 20+ years of textile-sector experience behind Appla Overseas, parent company of flagship premium brand <span className="text-[#E8C97A] font-semibold">Vovika</span>.</p>
+            <div className="mt-6"><VovikaMark /></div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white border-b border-[#C9A24B]/15">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[["2006", "Company Established"], ["20+", "Years in Textiles"], ["100K+", "Units / Month"], ["25+", "Countries Served"]].map(([v, l]) => (
+            <Reveal key={l}>
+              <p className="font-display text-3xl md:text-4xl font-bold gold-text">{v}</p>
+              <p className="mt-1 text-[11px] tracking-[0.2em] uppercase text-[#0A1A3C]/55">{l}</p>
+            </Reveal>
+          ))}
         </div>
       </section>
 

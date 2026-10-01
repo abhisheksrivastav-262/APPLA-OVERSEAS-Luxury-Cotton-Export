@@ -41,7 +41,7 @@ export default function Footer() {
           <div>
             <p className="text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase mb-4">Quick Links</p>
             <div className="grid gap-2.5 text-sm">
-              {[["/", "Home"], ["/about", "About"], ["/products", "Products"], ["/manufacturing", "Manufacturing"], ["/export", "Export"], ["/gallery", "Gallery"], ["/contact", "Contact"]].map(([h, l]) => (
+              {[["/", "Home"], ["/about", "About"], ["/vovika", "Vovika Brand"], ["/products", "Products"], ["/bedsheets", "Bedsheet Types"], ["/manufacturing", "Manufacturing"], ["/export", "Export"], ["/certifications", "Certifications"], ["/quote", "Request a Quote"], ["/gallery", "Gallery"], ["/contact", "Contact"]].map(([h, l]) => (
                 <Link key={h} href={h} className="text-white/65 hover:text-[#E8C97A] transition-colors w-fit">{l}</Link>
               ))}
             </div>
@@ -49,7 +49,7 @@ export default function Footer() {
           <div>
             <p className="text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase mb-4">Collections</p>
             <div className="grid gap-2.5 text-sm text-white/65">
-              <span>Pure Cotton Bedsheets</span><span>Luxury Comforters</span><span>Mattress Protectors</span><span>Hotel Linen Collection</span><span>OEM Manufacturing</span>
+              <span>Vovika Pure Cotton Bedsheets</span><span>Satin • Percale • Silk Bedsheets</span><span>Luxury Comforters</span><span>Quilted Bedcovers</span><span>Mattress Protectors</span><span>Hotel Linen Collection</span><span>OEM Manufacturing</span>
             </div>
           </div>
           <div>

@@ -1,7 +1,9 @@
-import { ShieldCheck, FlaskConical, Ruler, Palette, BedDouble, Award } from "lucide-react";
+import { ShieldCheck, FlaskConical, Ruler, Palette, BedDouble, Award, ClipboardCheck } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { IMAGES } from "@/data/site";
+import { IMAGES, QC_STEPS } from "@/data/site";
 
 export const metadata = { title: "Quality | APPLA OVERSEAS", description: "100% cotton assurance, lab testing, ISO practices & hotel standards." };
 
@@ -46,6 +48,26 @@ export default function Quality() {
               <p className="px-8 md:px-12 font-display text-2xl md:text-3xl text-white max-w-xl">“If it wouldn&apos;t pass a 5-star laundry, it doesn&apos;t ship.” — QC Head</p>
             </div>
           </Reveal>
+
+          <div className="mt-12">
+            <SectionHeading eyebrow="Strict QC Process" title="In-line se final packing tak" />
+            <div className="grid md:grid-cols-2 gap-5">
+              {QC_STEPS.map((s, i) => (
+                <Reveal key={s.t} delay={(i % 2) * 0.08}>
+                  <div className="rounded-[24px] bg-white lux-card p-7 flex gap-4 h-full border border-[#C9A24B]/25">
+                    <span className="w-11 h-11 shrink-0 rounded-2xl grid place-items-center bg-[#0A1A3C] text-[#E8C97A] font-display font-bold">{i + 1}</span>
+                    <div>
+                      <h3 className="font-display text-xl text-[#0A1A3C] font-semibold flex items-center gap-2">{s.t} <ClipboardCheck size={17} className="text-[#A8822E]" /></h3>
+                      <p className="mt-1.5 text-[14px] text-[#0A1A3C]/60">{s.d}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link href="/certifications" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] font-semibold">View Certifications <ArrowRight size={18} /></Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

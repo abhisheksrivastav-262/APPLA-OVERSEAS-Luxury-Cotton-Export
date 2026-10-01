@@ -6,26 +6,44 @@ import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Stats } from "@/components/Stats";
-import { ProductCard } from "@/components/ProductCard";
-import { IMAGES, PRODUCTS, COUNTRIES, TESTIMONIALS, FAQS, SITE } from "@/data/site";
+import { ProductCard, VovikaMark } from "@/components/ProductCard";
+import { HeroSlider } from "@/components/HeroSlider";
+import { VideoSection } from "@/components/VideoSection";
+import { IMAGES, PRODUCTS, COUNTRIES, TESTIMONIALS, FAQS, SITE, CERTIFICATIONS } from "@/data/site";
 
 const fadeUp = { initial: { opacity: 0, y: 34 }, animate: { opacity: 1, y: 0 } };
 
 export default function Home() {
-  const featured = PRODUCTS.slice(0, 8);
+  const sliderItems = [
+    "signature-400tc-white-bedsheet",
+    "vovika-satin-bedsheet",
+    "down-comforter-500tc",
+    "waterproof-mattress-protector",
+    "vovika-jacquard-bedcover",
+  ].map((s) => PRODUCTS.find((p) => p.slug === s)!).filter(Boolean);
+  const featured = [
+    "vovika-pure-cotton-bedsheet",
+    "down-comforter-500tc",
+    "waterproof-mattress-protector",
+    "vovika-jacquard-bedcover",
+    "hotel-stripe-bedsheet",
+    "terry-pillow-protector-pair",
+    "vovika-percale-bedsheet",
+    "oem-private-label",
+  ].map((s) => PRODUCTS.find((p) => p.slug === s)!).filter(Boolean);
   const [faqOpen, setFaqOpen] = useState<number | null>(0);
 
   return (
     <div className="bg-white">
       {/* 1. HERO */}
-      <section className="relative min-h-[100svh] flex items-end md:items-center hero-vignette overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-center hero-vignette overflow-hidden">
         <img src={IMAGES.hero} alt="Luxury cotton bedroom" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-16 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-32 sm:pt-36 pb-14 w-full grid lg:grid-cols-2 gap-10 items-center">
           <motion.div {...fadeUp} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }} className="max-w-3xl">
             <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-[#C9A24B]/40 text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase">
-              <BadgeCheck size={15} /> Trusted Export Manufacturer • India
+              <BadgeCheck size={15} /> Appla Overseas • Leading Home Textile Manufacturer & Exporter
             </p>
-            <h1 className="mt-6 font-display text-white text-[34px] sm:text-[42px] md:text-[68px] leading-[1.08] font-semibold text-balance">
+            <h1 className="mt-6 font-display text-white text-[34px] sm:text-[42px] md:text-[60px] leading-[1.08] font-semibold text-balance">
               Premium Cotton Textile <span className="gold-text">Manufacturer</span> & Exporter
             </h1>
             <p className="mt-5 text-white/75 text-[15px] md:text-lg max-w-xl">Supplying Luxury Bedding Solutions Across Global Markets — bedsheets, comforters, protectors & hotel linen to 25+ countries.</p>
@@ -33,8 +51,8 @@ export default function Home() {
               <Link href="/products" className="px-7 py-4 rounded-full bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] font-semibold text-[15px] shadow-[0_18px_45px_-12px_rgba(201,162,75,0.8)] hover:-translate-y-0.5 transition-transform flex items-center justify-center gap-2 min-h-[52px]">
                 Explore Collection <ArrowRight size={18} />
               </Link>
-              <Link href="/contact" className="px-7 py-4 rounded-full glass-dark border border-white/25 text-white font-semibold text-[15px] hover:bg-white/10 transition-colors text-center min-h-[52px]">
-                Export Inquiry
+              <Link href="/quote" className="px-7 py-4 rounded-full glass-dark border border-white/25 text-white font-semibold text-[15px] hover:bg-white/10 transition-colors text-center min-h-[52px]">
+                Request a Quote
               </Link>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-white/70 text-[13px]">
@@ -42,6 +60,9 @@ export default function Home() {
                 <span key={t} className="flex items-center gap-2"><span className="w-5 h-5 rounded-full grid place-items-center bg-[#C9A24B]/20 border border-[#C9A24B]/50 text-[#E8C97A] text-[11px]">✓</span>{t}</span>
               ))}
             </div>
+          </motion.div>
+          <motion.div {...fadeUp} transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}>
+            <HeroSlider items={sliderItems} />
           </motion.div>
         </div>
       </section>
@@ -55,6 +76,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* VOVIKA BRAND BAND */}
+      <section className="bg-gradient-to-r from-[#060f24] via-[#0A1A3C] to-[#060f24] border-b border-[#C9A24B]/25">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 py-10 grid lg:grid-cols-[auto_1fr_auto] gap-6 items-center">
+          <Reveal className="text-center lg:text-left">
+            <p className="text-[11px] tracking-[0.3em] uppercase text-white/50">Introducing</p>
+            <p className="font-display font-bold tracking-[0.2em] text-4xl sm:text-5xl gold-text">VOVIKA</p>
+            <p className="mt-1 text-[12px] tracking-[0.2em] uppercase text-[#E8C97A]/80">Our Premium Home Textile Range</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="font-display text-[16px] sm:text-lg text-white/85 leading-relaxed text-center lg:text-left">“{SITE.brandQuote}”</p>
+          </Reveal>
+          <Reveal delay={0.15} className="text-center">
+            <Link href="/vovika" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] font-semibold text-[14px] min-h-[52px]">
+              Explore Vovika <ArrowRight size={17} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
       {/* 3. ABOUT */}
       <section className="py-20 md:py-28 bg-[#FAF8F3]">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -65,8 +105,8 @@ export default function Home() {
               <div className="col-span-2 rounded-[20px] sm:rounded-[26px] overflow-hidden relative lux-card">
                 <img src={IMAGES.hotel2} alt="Luxury hotel bedding" className="h-48 sm:h-56 w-full object-cover" loading="lazy" />
                 <div className="absolute bottom-4 left-4 glass rounded-2xl px-5 py-3 border border-[#C9A24B]/30">
-                  <p className="font-display text-2xl font-bold text-[#0A1A3C]">15+ Years</p>
-                  <p className="text-[11px] tracking-[0.2em] uppercase text-[#A8822E]">Export Excellence</p>
+                  <p className="font-display text-2xl font-bold text-[#0A1A3C]">20+ Years</p>
+                  <p className="text-[11px] tracking-[0.2em] uppercase text-[#A8822E]">Since 2006 • Export Excellence</p>
                 </div>
               </div>
             </div>
@@ -74,7 +114,7 @@ export default function Home() {
           <Reveal delay={0.1}>
             <p className="text-[12px] tracking-[0.3em] uppercase text-[#A8822E] font-semibold">About APPLA Overseas</p>
             <h2 className="mt-3 font-display text-3xl md:text-[46px] leading-tight text-[#0A1A3C] font-semibold">Muzaffarnagar craftsmanship, <span className="gold-text">world-class</span> bedding.</h2>
-            <p className="mt-5 text-[#0A1A3C]/65 leading-relaxed">Led by Ravindra Singhwal, APPLA OVERSEAS manufactures pure-cotton bedsheets, comforters, mattress & pillow protectors and complete hotel linen systems — engineered for importers, retailers and hospitality groups.</p>
+            <p className="mt-5 text-[#0A1A3C]/65 leading-relaxed">Since 2006, led by Ravindra Singhwal, APPLA OVERSEAS manufactures pure-cotton bedsheets, comforters, mattress & pillow protectors and complete hotel linen systems — engineered for importers, retailers and hospitality groups.</p>
             <div className="mt-7 grid sm:grid-cols-2 gap-4">
               {[[Factory, "In-house stitching", "Cut-to-pack under one roof"], [ShieldCheck, "Export QA lab", "4-point + GSM + fastness checks"], [Leaf, "Responsible cotton", "BCI & eco-dye options"], [Truck, "Global logistics", "FOB / CIF / DDP + documents"]].map(([Icon, t, d]: any) => (
                 <div key={t as string} className="rounded-2xl bg-white border border-[#C9A24B]/20 p-5 hover:shadow-xl transition-shadow">
@@ -205,6 +245,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* CERTIFICATIONS STRIP */}
+      <section className="py-16 bg-white border-y border-[#C9A24B]/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <Reveal className="flex flex-col md:flex-row md:items-center gap-6 justify-between">
+            <div>
+              <p className="text-[11.5px] font-semibold tracking-[0.3em] uppercase text-[#A8822E]">Certified Quality</p>
+              <h2 className="mt-2 font-display text-2xl md:text-3xl text-[#0A1A3C] font-semibold">OEKO-TEX • GOTS • GRS • ISO 9001 • BCI</h2>
+            </div>
+            <div className="flex flex-wrap gap-2.5">
+              {CERTIFICATIONS.map((c) => (
+                <span key={c.short} className="px-4 py-2.5 rounded-full bg-[#0A1A3C] border border-[#C9A24B]/40 font-display font-bold text-[13px] gold-text">{c.short}</span>
+              ))}
+              <Link href="/certifications" className="px-4 py-2.5 rounded-full border-2 border-[#A8822E] text-[#0A1A3C] text-[13px] font-bold hover:bg-[#A8822E] hover:text-white transition-colors">View All →</Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <VideoSection />
 
       {/* 10. TESTIMONIALS */}
       <section className="py-20 md:py-28 bg-[#FAF8F3]">
