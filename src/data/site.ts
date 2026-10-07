@@ -17,29 +17,26 @@ export const SITE = {
   hours: "Mon – Sat: 9:30 AM – 7:00 PM IST",
 };
 
-export const img = (id: string, w = 1400) =>
-  `https://images.unsplash.com/photo-${id}?q=80&w=${w}&auto=format&fit=crop`;
-
+// All website imagery = real Wovica product photos (no external/AI images).
+// Every key uses a different photo so no image repeats within a page.
 export const IMAGES = {
-  hero: img("1522771739844-6a9f6d5f14af", 2000),
-  heroBed2: img("1505693416388-ac5ce068fe85", 1600),
-  bedroomBeige: img("1615874959474-d609969a20ed", 1400),
-  bedroomWhite: img("1540518614846-7eded433c457", 1400),
-  bedWhite: img("1631049307264-da0ec9d70304", 1400),
-  hotel1: img("1590490360182-c33d57733427", 1400),
-  hotel2: img("1582719478250-c89cae4dc85b", 1600),
-  hotelBed: img("1578683010236-d716f9a3f461", 1400),
-  luxuryRoom: img("1567016432779-094069958ea5", 1400),
-  smallBedroom: img("1595526114035-0d45ed16cfbf", 1200),
-  fabric: img("1558769132-cb1aea458c5e", 1400),
-  fabricColor: img("1528459801416-a9e53bbf4e17", 1400),
-  cottonFold: img("1620799140408-edc6dcb6d633", 1400),
-  tshirts: img("1523381210434-271e8be1f52b", 1400),
-  sewing: img("1605518216938-7c31b7b14ad0", 1400),
-  warehouse: img("1586528116311-ad8dd3c8310d", 1400),
-  warehouseBoxes: img("1578575437130-527eed3abbec", 1400),
-  containersAerial: img("1494412574643-ff11b0a5c1c3", 1600),
-  containers: img("1605745341112-85968b19335b", 1400),
+  hero: "/products/wovica-satin-chocolate.jpeg",
+  heroBed2: "/products/wovica-rustic-rose.jpeg",
+  bedroomBeige: "/products/wovica-satin-navy.jpeg",
+  bedroomWhite: "/products/wovica-protector-white.jpeg",
+  hotel1: "/products/wovica-satin-navy.jpeg",
+  hotel2: "/products/wovica-satin-grey.jpeg",
+  hotelBed: "/products/wovica-satin-charcoal.jpeg",
+  luxuryRoom: "/products/wovica-indigo-heritage.jpeg",
+  fabric: "/products/wovica-fitted-lavender.jpeg",
+  fabricColor: "/products/wovica-marigold-meadow.jpeg",
+  cottonFold: "/products/wovica-rustic-rose.jpeg",
+  tshirts: "/products/wovica-teal-blossom.jpeg",
+  sewing: "/products/wovica-fitted-maroon.jpeg",
+  warehouse: "/products/wovica-indigo-heritage.jpeg",
+  warehouseBoxes: "/products/wovica-satin-chocolate.jpeg",
+  containersAerial: "/products/wovica-protector-grey.jpeg",
+  containers: "/products/wovica-protector-white.jpeg",
 };
 
 export type Product = {
@@ -52,54 +49,125 @@ export type Product = {
   gsm: string;
   moq: string;
   badge?: string;
+  brandLine?: string;
   desc: string;
 };
 
 export const CATEGORIES = [
   "All",
   "Bedsheets",
-  "Bedcovers",
-  "Comforters",
   "Mattress Protectors",
-  "Pillows",
-  "Hotel Linen",
-  "OEM",
+  "Comforters",
 ] as const;
 
 export const PRODUCTS: Product[] = [
-  { slug: "signature-400tc-white-bedsheet", title: "Signature 400TC White Bedsheet Set", category: "Bedsheets", image: img("1505693416388-ac5ce068fe85", 1000), material: "100% Long-Staple Cotton", sizes: "King / Queen / Twin", gsm: "140 GSM • 400TC", moq: "500 Sets", badge: "Best Manufacturing Company", desc: "Crisp hotel-white percale with sateen finish, deep-hem stitching and zero pilling." },
-  { slug: "royal-sateen-printed-bedsheet", title: "Royal Sateen Printed Bedsheet", category: "Bedsheets", image: img("1522771739844-6a9f6d5f14af", 1000), material: "100% Cotton Sateen", sizes: "King / Queen", gsm: "130 GSM • 300TC", moq: "500 Sets", badge: "Premium", desc: "Elegant jewel-tone prints with colour-fast reactive dyes for retail brands." },
-  { slug: "solid-dyed-bedsheet-collection", title: "Solid Dyed Bedsheet – 24 Colours", category: "Bedsheets", image: img("1615874959474-d609969a20ed", 1000), material: "100% Cotton", sizes: "All Sizes + Custom", gsm: "125–145 GSM", moq: "1000 Pcs", desc: "Garment-dyed solids with shrinkage control under 3% for private label." },
-  { slug: "fitted-bedsheet-deep-pocket", title: "Deep-Pocket Fitted Bedsheet", category: "Bedsheets", image: img("1631049307264-da0ec9d70304", 1000), material: "100% Cotton + Elastic", sizes: "Up to 18\" Pocket", gsm: "135 GSM • 300TC", moq: "800 Pcs", badge: "Export Quality", desc: "Full elastic + reinforced corners, tailored for 5-star hotel mattresses." },
-  { slug: "hotel-stripe-bedsheet", title: "Hotel Stripe Dobby Bedsheet", category: "Hotel Linen", image: img("1578683010236-d716f9a3f461", 1000), material: "100% Cotton Dobby", sizes: "Hotel King / Cal King", gsm: "140 GSM", moq: "1000 Pcs", badge: "Hotel Grade", desc: "Classic 1cm satin stripe, 60s yarn, iron-friendly for commercial laundry." },
-  { slug: "quilt-cover-sateen-set", title: "Luxury Quilt Cover Set", category: "Bedsheets", image: img("1540518614846-7eded433c457", 1000), material: "Cotton Sateen", sizes: "King / Queen", gsm: "300TC", moq: "500 Sets", desc: "Hidden-button closure, corner ties, matching pillow covers included." },
-  { slug: "down-comforter-500tc", title: "Grand 500TC Down-Alternative Comforter", category: "Comforters", image: img("1582719478250-c89cae4dc85b", 1000), material: "Cotton Shell + Microfiber", sizes: "Twin – Oversized King", gsm: "250–400 GSM Fill", moq: "500 Pcs", badge: "Luxury", desc: "Box-stitched, reversible cloud fill with corner loops for duvet use." },
-  { slug: "winter-warm-comforter", title: "Arctic Winter Comforter", category: "Comforters", image: img("1567016432779-094069958ea5", 1000), material: "Brushed Microfiber", sizes: "Single / Double / King", gsm: "350 GSM", moq: "500 Pcs", desc: "Extra-loft siliconized fill for -5°C comfort, anti-shift quilting." },
-  { slug: "reversible-comforter-duo", title: "Reversible Duo Comforter", category: "Comforters", image: img("1595526114035-0d45ed16cfbf", 1000), material: "100% Cotton Face", sizes: "Queen / King", gsm: "200 GSM Fill", moq: "500 Pcs", badge: "Premium", desc: "Two luxury looks in one – solid / print reversible for retailers." },
-  { slug: "waterproof-mattress-protector", title: "AquaShield Waterproof Protector", category: "Mattress Protectors", image: img("1631049307264-da0ec9d70304", 900), material: "Cotton Terry + TPU", sizes: "All Mattress Depths", gsm: "160 GSM", moq: "1000 Pcs", badge: "Best Manufacturing Company", desc: "Silent, breathable TPU membrane – 100% waterproof, no crinkle sound." },
-  { slug: "quilted-mattress-protector", title: "Premium Quilted Mattress Protector", category: "Mattress Protectors", image: img("1505693416388-ac5ce068fe85", 900), material: "Cotton + Poly Fill", sizes: "Twin – King", gsm: "180 GSM", moq: "1000 Pcs", desc: "Diamond quilting adds 1.5cm plushness while protecting mattress life." },
-  { slug: "breathable-cool-protector", title: "CoolBreeze Breathable Protector", category: "Mattress Protectors", image: img("1615874959474-d609969a20ed", 900), material: "Cotton Jersey Knit", sizes: "Custom OEM", gsm: "150 GSM", moq: "1200 Pcs", desc: "Air-flow knit for hot climates – favourite in UAE & Australia." },
-  { slug: "terry-pillow-protector-pair", title: "Terry Cotton Pillow Protector (Pair)", category: "Pillows", image: img("1540518614846-7eded433c457", 900), material: "Cotton Terry + Zip", sizes: "Standard / King", gsm: "160 GSM", moq: "2000 Pcs", badge: "Export Quality", desc: "Zippered, waterproof yet soft – extends pillow life 3x for hotels." },
-  { slug: "sateen-pillow-covers", title: "Sateen Pillow Covers – Set of 2", category: "Pillows", image: img("1522771739844-6a9f6d5f14af", 900), material: "100% Cotton 400TC", sizes: "20\"x30\" + Flange", gsm: "400TC", moq: "2000 Pcs", desc: "Envelope closure, French flange detail for boutique hotel look." },
-  { slug: "hotel-duvet-set", title: "Hotel White Duvet Set", category: "Hotel Linen", image: img("1590490360182-c33d57733427", 1000), material: "100% Cotton Percale", sizes: "Hotel Queen / King", gsm: "200TC–400TC", moq: "800 Sets", badge: "Hotel Grade", desc: "Complete hotel bedding system: sheet + duvet + protectors, bulk ready." },
-  { slug: "hotel-pillow-collection", title: "Hotel Pillow & Linen Bundle", category: "Hotel Linen", image: img("1578683010236-d716f9a3f461", 1000), material: "Cotton Blend", sizes: "Custom Hotel Spec", gsm: "As per tender", moq: "ON Tender", desc: "Tender-ready hotel kits with logo embroidery and barcoding." },
-  { slug: "bed-in-a-bag-retail", title: "Retail Bed-in-a-Bag – 7 Pc", category: "Hotel Linen", image: img("1567016432779-094069958ea5", 1000), material: "Cotton Rich", sizes: "Full / Queen / King", gsm: "Mixed", moq: "1000 Sets", desc: "Retail-ready packaging with insert card for USA / UK importers." },
-  { slug: "oem-private-label", title: "OEM Private Label Program", category: "OEM", image: img("1558769132-cb1aea458c5e", 1000), material: "Buyer Spec Fabric", sizes: "Fully Custom", gsm: "Custom", moq: "As low as 500", badge: "OEM", desc: "Your brand, our factory – labels, packaging, GSM and sizes to spec." },
-  { slug: "sustainable-cotton-line", title: "Pure Earth Sustainable Line", category: "OEM", image: img("1528459801416-a9e53bbf4e17", 1000), material: "BCI / Organic Cotton", sizes: "Custom", gsm: "130–160 GSM", moq: "800 Pcs", badge: "Eco", desc: "Traceable cotton with eco dyes for EU sustainability mandates." },
-  { slug: "kids-printed-comforter", title: "Kids Joy Printed Comforter", category: "Comforters", image: img("1595526114035-0d45ed16cfbf", 1000), material: "Cotton + Microfiber", sizes: "Single / Twin", gsm: "200 GSM", moq: "800 Pcs", desc: "Playful OEKO-TEX style prints, hypoallergenic fill for kids." },
-  { slug: "euro-sham-cushion-set", title: "Euro Sham + Cushion Accent Set", category: "Pillows", image: img("1615874959474-d609969a20ed", 1000), material: "Cotton Canvas", sizes: "26\"x26\" + 18\"x18\"", gsm: "180 GSM", moq: "1500 Sets", desc: "Designer shams for home-textile retailers and staging companies." },
-  { slug: "export-overstock-deal", title: "Container-Ready Assorted Lot", category: "OEM", image: img("1578575437130-527eed3abbec", 1000), material: "Mixed Cotton", sizes: "Assorted", gsm: "Mixed", moq: "1x40HQ", badge: "Bulk", desc: "Best landed-cost option – mixed designs for discount chains." },
-  // ---- Bedsheet types ----
-  { slug: "wovika-pure-cotton-bedsheet", title: "Wovica Pure Cotton Bedsheet", category: "Bedsheets", image: img("1522771739844-6a9f6d5f14af", 1000), material: "100% Pure Cotton", sizes: "King / Queen / Twin", gsm: "144 TC • 140 GSM", moq: "500 Sets", badge: "Best Manufacturing Company", desc: "Our flagship everyday luxury – breathable pure cotton with a soft peach finish." },
-  { slug: "wovika-satin-bedsheet", title: "Premium Satin Bedsheet", category: "Bedsheets", image: img("1615874959474-d609969a20ed", 1000), material: "Cotton Satin", sizes: "King / Queen", gsm: "300–400 TC", moq: "500 Sets", badge: "Premium", desc: "Silky sateen weave with a rich sheen – the 5-star hotel favourite." },
-  { slug: "wovika-percale-bedsheet", title: "Crisp Percale Bedsheet", category: "Bedsheets", image: img("1631049307264-da0ec9d70304", 1000), material: "100% Cotton Percale", sizes: "All Sizes + Custom", gsm: "200–300 TC", moq: "800 Sets", desc: "Cool, crisp matte percale that gets softer with every wash." },
-  { slug: "wovika-combed-cotton-bedsheet", title: "Combed Cotton Bedsheet", category: "Bedsheets", image: img("1505693416388-ac5ce068fe85", 1000), material: "Combed Cotton", sizes: "King / Queen / Twin", gsm: "180–250 TC", moq: "800 Sets", desc: "Combed fibres remove impurities – stronger, smoother, colour-fast." },
-  { slug: "wovika-silk-bedsheet", title: "Premium Silk Bedsheet", category: "Bedsheets", image: img("1540518614846-7eded433c457", 1000), material: "Premium Silk Blend", sizes: "Queen / King", gsm: "22 Momme", moq: "300 Sets", badge: "Luxury", desc: "Ultra-premium silk-touch bedsheet for boutique and palace hotels." },
-  { slug: "wovika-microfiber-bedsheet", title: "Soft Microfiber Bedsheet", category: "Bedsheets", image: img("1595526114035-0d45ed16cfbf", 1000), material: "Brushed Microfiber", sizes: "All Sizes", gsm: "110 GSM", moq: "1000 Sets", desc: "Wrinkle-resistant, quick-dry microfiber at sharp container pricing." },
-  // ---- Bedcovers ----
-  { slug: "wovika-jacquard-bedcover", title: "Jacquard Woven Bedcover", category: "Bedcovers", image: img("1567016432779-094069958ea5", 1000), material: "Cotton Jacquard", sizes: "King / Queen", gsm: "220 GSM", moq: "500 Sets", badge: "Premium", desc: "Woven jacquard patterns – no print, texture that lasts decades." },
-  { slug: "wovika-printed-bedcover", title: "Printed Quilted Bedcover", category: "Bedcovers", image: img("1528459801416-a9e53bbf4e17", 1000), material: "Cotton + Fill", sizes: "King / Queen", gsm: "180 GSM + Fill", moq: "500 Sets", desc: "Quilted printed bedcovers with diamond stitching and piped edges." },
-  { slug: "wovika-patchwork-bedcover", title: "Patchwork Bedcover", category: "Bedcovers", image: img("1523381210434-271e8be1f52b", 1000), material: "Cotton Patchwork", sizes: "Queen / King", gsm: "200 GSM", moq: "500 Sets", desc: "Hand-look patchwork panels – a handicraft story for global retail." },
+  // ---- NOTE: catalog me sirf real-photo products (koi duplicate image nahi) ----
+  // ---- Wovica real-photo printed bedsheets ----
+  { slug: "wovica-rustic-rose", title: "Wovica Rustic Rose Bedsheet Set", category: "Bedsheets", image: "/products/wovica-rustic-rose.jpeg", material: "100% Pure Cotton – Printed", sizes: "King / Queen", gsm: "144 TC • 140 GSM", moq: "500 Sets", badge: "Best Manufacturing Company", brandLine: "WOVICA 100% COTTON BEDSHEETS", desc: "Rust-red floral print with contrast border – bedsheet with 2 pillow covers." },
+  { slug: "wovica-marigold-meadow", title: "Wovica Marigold Meadow Bedsheet Set", category: "Bedsheets", image: "/products/wovica-marigold-meadow.jpeg", material: "100% Pure Cotton – Printed", sizes: "King / Queen", gsm: "144 TC • 140 GSM", moq: "500 Sets", badge: "Premium", brandLine: "WOVICA 100% COTTON BEDSHEETS", desc: "Sunny marigold print on sage green – bedsheet with 2 pillow covers." },
+  { slug: "wovica-teal-blossom", title: "Wovica Teal Blossom Bedsheet Set", category: "Bedsheets", image: "/products/wovica-teal-blossom.jpeg", material: "100% Pure Cotton – Printed", sizes: "King / Queen", gsm: "144 TC • 140 GSM", moq: "500 Sets", brandLine: "WOVICA 100% COTTON BEDSHEETS", desc: "Teal-blue blossom print with yellow border – bedsheet with 2 pillow covers." },
+  { slug: "wovica-indigo-heritage", title: "Wovica Indigo Heritage Bedsheet Set", category: "Bedsheets", image: "/products/wovica-indigo-heritage.jpeg", material: "100% Pure Cotton – Printed", sizes: "King / Queen", gsm: "144 TC • 140 GSM", moq: "500 Sets", brandLine: "WOVICA 100% COTTON BEDSHEETS", desc: "Indigo heritage tree-of-life print – bedsheet with 2 pillow covers." },
+  // ---- Wovica real-photo premium satin bedsheets ----
+  { slug: "wovica-satin-chocolate", title: "Wovica Royal Chocolate Premium Quality Satin Bedsheet Set", category: "Bedsheets", image: "/products/wovica-satin-chocolate.jpeg", material: "Premium Satin – 300TC", sizes: "King / Queen", gsm: "300 TC • 130 GSM", moq: "500 Sets", badge: "Best Manufacturing Company", brandLine: "WOVICA PREMIUM QUALITY SATIN BEDSHEETS", desc: "Royal chocolate with gold emblem print – silky sateen bedsheet with 2 pillow covers." },
+  { slug: "wovica-satin-navy", title: "Wovica Midnight Navy Premium Quality Satin Bedsheet Set", category: "Bedsheets", image: "/products/wovica-satin-navy.jpeg", material: "Premium Satin – 300TC", sizes: "King / Queen", gsm: "300 TC • 130 GSM", moq: "500 Sets", badge: "Premium", brandLine: "WOVICA PREMIUM QUALITY SATIN BEDSHEETS", desc: "Midnight navy with sky-blue motifs – silky sateen bedsheet with 2 pillow covers." },
+  { slug: "wovica-satin-grey", title: "Wovica Sterling Grey Premium Quality Satin Bedsheet Set", category: "Bedsheets", image: "/products/wovica-satin-grey.jpeg", material: "Premium Satin – 300TC", sizes: "King / Queen", gsm: "300 TC • 130 GSM", moq: "500 Sets", brandLine: "WOVICA PREMIUM QUALITY SATIN BEDSHEETS", desc: "Sterling grey with gold emblem print – silky sateen bedsheet with 2 pillow covers." },
+  { slug: "wovica-satin-charcoal", title: "Wovica Charcoal Medallion Premium Quality Satin Bedsheet Set", category: "Bedsheets", image: "/products/wovica-satin-charcoal.jpeg", material: "Premium Satin – 300TC", sizes: "King / Queen", gsm: "300 TC • 130 GSM", moq: "500 Sets", badge: "Premium", brandLine: "WOVICA PREMIUM QUALITY SATIN BEDSHEETS", desc: "Charcoal grey with gold medallion print – silky sateen bedsheet with 2 pillow covers." },
+  // ---- Wovica real-photo fitted bedsheets ----
+  { slug: "wovica-fitted-lavender", title: "Wovica Lavender Mist Fitted Bedsheet", category: "Bedsheets", image: "/products/wovica-fitted-lavender.jpeg", material: "100% Cotton – Solid", sizes: "King / Queen – Deep Pocket", gsm: "140 GSM", moq: "800 Sets", brandLine: "WOVICA 100% COTTON BEDSHEETS", desc: "Solid lavender deep-pocket fitted sheet with full elastic." },
+  { slug: "wovica-fitted-maroon", title: "Wovica Royal Maroon Fitted Bedsheet", category: "Bedsheets", image: "/products/wovica-fitted-maroon.jpeg", material: "100% Cotton – Solid", sizes: "King / Queen – Deep Pocket", gsm: "140 GSM", moq: "800 Sets", brandLine: "WOVICA 100% COTTON BEDSHEETS", desc: "Rich maroon deep-pocket fitted sheet with full elastic." },
+  // ---- Wovica real-photo waterproof protectors ----
+  { slug: "wovica-protector-white", title: "Wovica AquaShield White Waterproof Mattress Protector", category: "Mattress Protectors", image: "/products/wovica-protector-white.jpeg", material: "Cotton Terry + TPU", sizes: "All Mattress Depths", gsm: "160 GSM", moq: "1000 Pcs", badge: "Best Manufacturing Company", brandLine: "WOVICA PREMIUM QUALITY MATTRESS PROTECTORS", desc: "White quilted waterproof protector – liquid test passed, silent layer." },
+  { slug: "wovica-protector-grey", title: "Wovica AquaShield Grey Waterproof Mattress Protector", category: "Mattress Protectors", image: "/products/wovica-protector-grey.jpeg", material: "Cotton Terry + TPU", sizes: "All Mattress Depths", gsm: "160 GSM", moq: "1000 Pcs", brandLine: "WOVICA PREMIUM QUALITY MATTRESS PROTECTORS", desc: "Grey quilted waterproof protector – liquid test passed, silent layer." },
+];
+
+export type Variant = { name: string; image: string };
+export type Group = {
+  slug: string;
+  title: string;
+  brandLine: string;
+  category: string;
+  badge?: string;
+  material: string;
+  sizes: string;
+  gsm: string;
+  moq: string;
+  desc: string;
+  variants: Variant[];
+};
+
+// 3 groups — har group me 4 photos ek line me, ek hi naam. Koi photo repeat nahi.
+export const GROUPS: Group[] = [
+  {
+    slug: "wovica-cotton-bedsheets",
+    title: "Wovica 100% Cotton Bedsheets",
+    brandLine: "WOVICA 100% COTTON BEDSHEETS",
+    category: "Bedsheets",
+    badge: "Best Manufacturing Company",
+    material: "100% Pure Cotton – Printed",
+    sizes: "King / Queen",
+    gsm: "144 TC • 140 GSM",
+    moq: "500 Sets",
+    desc: "Floral printed bedsheet sets with contrast borders – bedsheet with 2 pillow covers. 4 colours, ek hi premium quality.",
+    variants: [
+      { name: "Rustic Rose", image: "/products/wovica-rustic-rose.jpeg" },
+      { name: "Marigold Meadow", image: "/products/wovica-marigold-meadow.jpeg" },
+      { name: "Teal Blossom", image: "/products/wovica-teal-blossom.jpeg" },
+      { name: "Indigo Heritage", image: "/products/wovica-indigo-heritage.jpeg" },
+    ],
+  },
+  {
+    slug: "wovica-satin-bedsheets",
+    title: "Wovica Premium Quality Satin Bedsheets",
+    brandLine: "WOVICA PREMIUM QUALITY SATIN BEDSHEETS",
+    category: "Bedsheets",
+    badge: "Premium",
+    material: "Premium Satin – 300TC",
+    sizes: "King / Queen",
+    gsm: "300 TC • 130 GSM",
+    moq: "500 Sets",
+    desc: "Silky sateen bedsheets with gold prints – bedsheet with 2 pillow covers. 4 colours, ek hi premium quality.",
+    variants: [
+      { name: "Royal Chocolate", image: "/products/wovica-satin-chocolate.jpeg" },
+      { name: "Midnight Navy", image: "/products/wovica-satin-navy.jpeg" },
+      { name: "Sterling Grey", image: "/products/wovica-satin-grey.jpeg" },
+      { name: "Charcoal Medallion", image: "/products/wovica-satin-charcoal.jpeg" },
+    ],
+  },
+  {
+    slug: "wovica-mattress-protector",
+    title: "Wovica Premium Quality Mattress Protector",
+    brandLine: "WOVICA PREMIUM QUALITY MATTRESS PROTECTOR",
+    category: "Mattress Protectors",
+    badge: "Best Manufacturing Company",
+    material: "Cotton + TPU Waterproof",
+    sizes: "All Mattress Depths",
+    gsm: "140–160 GSM",
+    moq: "800–1000 Pcs",
+    desc: "Fitted sheets aur quilted waterproof protectors – silent, breathable, liquid-tested. 4 colours, ek hi premium quality.",
+    variants: [
+      { name: "Lavender Mist", image: "/products/wovica-fitted-lavender.jpeg" },
+      { name: "Royal Maroon", image: "/products/wovica-fitted-maroon.jpeg" },
+      { name: "AquaShield White", image: "/products/wovica-protector-white.jpeg" },
+      { name: "AquaShield Grey", image: "/products/wovica-protector-grey.jpeg" },
+    ],
+  },
+  {
+    slug: "wovica-comforter-4pcs",
+    title: "Wovica Premium Quality Comforter 4 Pcs Set",
+    brandLine: "WOVICA PREMIUM QUALITY COMFORTER 4 PCS SET",
+    category: "Comforters",
+    badge: "Premium",
+    material: "Cotton + Microfiber Fill",
+    sizes: "Single / Double / King",
+    gsm: "200 GSM Fill",
+    moq: "500 Sets",
+    desc: "Reversible comforter 4 pcs set with pillows – plush microfiber fill, 3 colours, ek hi premium quality.",
+    variants: [
+      { name: "Midnight Navy", image: "/products/wovica-comforter-navy.jpeg" },
+      { name: "Olive Green", image: "/products/wovica-comforter-olive.jpeg" },
+      { name: "Terracotta", image: "/products/wovica-comforter-terracotta.jpeg" },
+    ],
+  },
 ];
 
 export const STATS = [
@@ -113,10 +181,10 @@ export const STATS = [
 export const COUNTRIES = ["USA", "UK", "Canada", "Germany", "France", "UAE", "Australia", "Netherlands", "Spain", "Italy", "South Africa", "Japan"];
 
 export const TESTIMONIALS = [
-  { name: "James Carter", role: "Procurement Head, Hotel Group – USA", text: "APPLA's 400TC sheets survived 200+ commercial washes with zero pilling. Our guest satisfaction scores on bedding jumped 31%.", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" },
-  { name: "Sophie Müller", role: "Founder, Home Retail – Germany", text: "Flawless OEM execution. Custom sizes, German labelling, on-time Hamburg delivery. Our returns dropped to under 1%.", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" },
-  { name: "Ahmed Al Farsi", role: "Importer, Dubai – UAE", text: "Breathable protectors built for Gulf heat. Packaging, barcodes, documentation – everything export-ready. True professionals.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" },
-  { name: "Emily Thompson", role: "Buyer, Boutique Stores – UK", text: "The reversible comforters are our top reorder three seasons running. Luxury hand-feel at a landed cost that works.", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" },
+  { name: "James Carter", role: "Procurement Head, Hotel Group – USA", text: "APPLA's 400TC sheets survived 200+ commercial washes with zero pilling. Our guest satisfaction scores on bedding jumped 31%." },
+  { name: "Sophie Müller", role: "Founder, Home Retail – Germany", text: "Flawless OEM execution. Custom sizes, German labelling, on-time Hamburg delivery. Our returns dropped to under 1%." },
+  { name: "Ahmed Al Farsi", role: "Importer, Dubai – UAE", text: "Breathable protectors built for Gulf heat. Packaging, barcodes, documentation – everything export-ready. True professionals." },
+  { name: "Emily Thompson", role: "Buyer, Boutique Stores – UK", text: "The reversible comforters are our top reorder three seasons running. Luxury hand-feel at a landed cost that works." },
 ];
 
 export const FAQS = [
@@ -153,16 +221,19 @@ export const BEDSHEET_TYPES = [
 ];
 
 export const GALLERY = [
-  { src: img("1522771739844-6a9f6d5f14af", 900), cat: "Bedsheets", title: "Sateen Dobby Bed" },
-  { src: img("1505693416388-ac5ce068fe85", 900), cat: "Bedsheets", title: "Signature White Set" },
-  { src: img("1582719478250-c89cae4dc85b", 900), cat: "Comforters", title: "Grand Comforter" },
-  { src: img("1567016432779-094069958ea5", 900), cat: "Comforters", title: "Winter Loft" },
-  { src: img("1631049307264-da0ec9d70304", 900), cat: "Protectors", title: "AquaShield Layer" },
-  { src: img("1540518614846-7eded433c457", 900), cat: "Bedsheets", title: "Quilt Cover Styling" },
-  { src: img("1558769132-cb1aea458c5e", 900), cat: "Factory", title: "Fabric Library" },
-  { src: img("1605518216938-7c31b7b14ad0", 900), cat: "Factory", title: "Precision Stitching" },
-  { src: img("1528459801416-a9e53bbf4e17", 900), cat: "Factory", title: "Reactive Dyeing" },
-  { src: img("1578575437130-527eed3abbec", 900), cat: "Packaging", title: "Export Cartons" },
-  { src: img("1494412574643-ff11b0a5c1c3", 900), cat: "Export Containers", title: "Container Yard" },
-  { src: img("1590490360182-c33d57733427", 900), cat: "Bedsheets", title: "Hotel Suite Bed" },
+  { src: "/products/wovica-rustic-rose.jpeg", cat: "Bedsheets", title: "Rustic Rose Set" },
+  { src: "/products/wovica-marigold-meadow.jpeg", cat: "Bedsheets", title: "Marigold Meadow Set" },
+  { src: "/products/wovica-teal-blossom.jpeg", cat: "Bedsheets", title: "Teal Blossom Set" },
+  { src: "/products/wovica-indigo-heritage.jpeg", cat: "Bedsheets", title: "Indigo Heritage Set" },
+  { src: "/products/wovica-satin-chocolate.jpeg", cat: "Bedsheets", title: "Royal Chocolate Satin" },
+  { src: "/products/wovica-satin-navy.jpeg", cat: "Bedsheets", title: "Midnight Navy Satin" },
+  { src: "/products/wovica-satin-grey.jpeg", cat: "Bedsheets", title: "Sterling Grey Satin" },
+  { src: "/products/wovica-satin-charcoal.jpeg", cat: "Bedsheets", title: "Charcoal Medallion Satin" },
+  { src: "/products/wovica-fitted-lavender.jpeg", cat: "Bedsheets", title: "Lavender Mist Fitted" },
+  { src: "/products/wovica-fitted-maroon.jpeg", cat: "Bedsheets", title: "Royal Maroon Fitted" },
+  { src: "/products/wovica-protector-white.jpeg", cat: "Protectors", title: "AquaShield White" },
+  { src: "/products/wovica-protector-grey.jpeg", cat: "Protectors", title: "AquaShield Grey" },
+  { src: "/products/wovica-comforter-navy.jpeg", cat: "Comforters", title: "Navy Comforter Set" },
+  { src: "/products/wovica-comforter-olive.jpeg", cat: "Comforters", title: "Olive Comforter Set" },
+  { src: "/products/wovica-comforter-terracotta.jpeg", cat: "Comforters", title: "Terracotta Comforter Set" },
 ];

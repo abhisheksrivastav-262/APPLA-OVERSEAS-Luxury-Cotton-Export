@@ -21,9 +21,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#C9A24B] to-[#7a5f1e] grid place-items-center">
-                <span className="font-display text-xl font-bold text-[#060f24]">A</span>
-              </div>
+              <img src="/wovica-logo.jpeg" alt="Wovica logo" className="w-12 h-12 rounded-full object-cover border-2 border-[#C9A24B]/60 shadow-lg bg-white" />
               <div>
                 <p className="font-display font-bold tracking-[0.15em]">APPLA OVERSEAS</p>
                 <p className="text-[11px] tracking-[0.25em] text-[#E8C97A] uppercase">Luxury Cotton Export</p>
@@ -49,7 +47,7 @@ export default function Footer() {
           <div>
             <p className="text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase mb-4">Collections</p>
             <div className="grid gap-2.5 text-sm text-white/65">
-              <span>Wovica Pure Cotton Bedsheets</span><span>Satin • Percale • Silk Bedsheets</span><span>Luxury Comforters</span><span>Quilted Bedcovers</span><span>Mattress Protectors</span><span>Hotel Linen Collection</span><span>OEM Manufacturing</span>
+              <span>Wovica 100% Cotton Bedsheets</span><span>Premium Satin Bedsheets</span><span>Fitted Bedsheets</span><span>Waterproof Mattress Protectors</span><span>Comforter 4 Pcs Sets</span><span>OEM Manufacturing</span>
             </div>
           </div>
           <div>

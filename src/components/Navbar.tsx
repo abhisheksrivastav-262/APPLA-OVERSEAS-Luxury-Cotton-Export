@@ -77,9 +77,7 @@ export default function Navbar() {
         </div>
         <nav className="max-w-7xl mx-auto px-5 md:px-6 py-3.5 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3" aria-label="APPLA Overseas home">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#0A1A3C] via-[#10265a] to-[#0A1A3C] border border-[#C9A24B]/50 grid place-items-center shadow-lg shrink-0">
-              <span className="font-display text-[#E8C97A] text-xl font-bold">A</span>
-            </div>
+            <img src="/wovica-logo.jpeg" alt="Wovica logo" className="w-11 h-11 rounded-full object-cover border-2 border-[#C9A24B]/60 shadow-lg shrink-0 bg-white" />
             <div className="leading-tight">
               <p className="font-display font-bold tracking-[0.18em] text-[15px] gold-text">APPLA OVERSEAS</p>
               <p className={`text-[10px] tracking-[0.22em] uppercase ${solid ? "text-[#A8822E]" : "text-[#E8C97A] drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]"}`}>Wovica • Luxury Cotton Export</p>

@@ -8,8 +8,9 @@ export function VideoSection() {
   const [hasVideo, setHasVideo] = useState<boolean | null>(null);
 
   useEffect(() => {
-    fetch("/brand-film.mp4", { method: "HEAD" })
-      .then((r) => setHasVideo(r.ok))
+    fetch("/api/brand-film")
+      .then((r) => (r.ok ? r.json() : { exists: false }))
+      .then((d) => setHasVideo(!!d.exists))
       .catch(() => setHasVideo(false));
   }, []);
 
@@ -27,19 +28,29 @@ export function VideoSection() {
         </Reveal>
         <Reveal>
           {hasVideo === null ? (
-            <div className="w-full h-[320px] sm:h-[440px] rounded-[30px] bg-white/5 border border-[#C9A24B]/20 animate-pulse" />
+            <div className="w-full aspect-video rounded-[30px] bg-white/5 border border-[#C9A24B]/20 animate-pulse" />
           ) : showVideo ? (
-            <video
-              controls
-              preload="metadata"
-              poster={IMAGES.hero}
-              className="w-full rounded-[30px] border border-[#C9A24B]/40 shadow-2xl max-h-[70vh] bg-black"
-            >
-              <source src="/brand-film.mp4" type="video/mp4" />
-            </video>
+            <div>
+              <div className="relative rounded-[30px] overflow-hidden border-2 border-[#C9A24B]/50 shadow-[0_30px_80px_-20px_rgba(201,162,75,0.35)]">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={IMAGES.hero}
+                  className="w-full aspect-video bg-black"
+                >
+                  <source src="/brand-film.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
+                <span className="px-4 py-2 rounded-full bg-white/5 border border-[#C9A24B]/30 text-[#E8C97A] text-[12px] font-semibold tracking-[0.15em] uppercase">Wovica Brand Film</span>
+                <span className="px-4 py-2 rounded-full bg-white/5 border border-[#C9A24B]/30 text-white/70 text-[12px] font-semibold tracking-[0.15em] uppercase">HD • With Sound</span>
+              </div>
+            </div>
           ) : (
             <div className="relative rounded-[30px] overflow-hidden border border-[#C9A24B]/30">
-              <img src={IMAGES.sewing} alt="Factory film coming soon" className="w-full h-[320px] sm:h-[440px] object-cover opacity-60" loading="lazy" />
+              <img src={IMAGES.sewing} alt="Factory film coming soon" className="w-full aspect-square object-cover opacity-60" loading="lazy" />
               <div className="absolute inset-0 grid place-items-center bg-[#060f24]/55">
                 <div className="text-center px-6">
                   <span className="mx-auto w-20 h-20 rounded-full grid place-items-center bg-gradient-to-br from-[#A8822E] to-[#E8C97A] text-[#060f24] shadow-[0_0_50px_-5px_rgba(201,162,75,0.8)]">

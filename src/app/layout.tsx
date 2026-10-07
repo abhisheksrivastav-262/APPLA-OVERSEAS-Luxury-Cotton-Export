@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "Luxury cotton bedding manufacturer & exporter. Hotel linen, comforters, protectors, OEM private label.",
     type: "website",
   },
+  icons: { icon: "/wovica-logo.jpeg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

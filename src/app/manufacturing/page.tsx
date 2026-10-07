@@ -36,7 +36,7 @@ export default function Manufacturing() {
             {STEPS.map((s, i) => (
               <Reveal key={s.t} delay={0.05}>
                 <div className={`grid md:grid-cols-2 gap-0 rounded-[28px] overflow-hidden bg-white lux-card ${i % 2 ? "md:[direction:rtl]" : ""}`}>
-                  <div className="h-64 md:h-80 overflow-hidden img-zoom"><img src={s.img} alt={s.t} className="w-full h-full object-cover" loading="lazy" /></div>
+                  <div className="aspect-square"><img src={s.img} alt={s.t} className="w-full h-full object-cover" loading="lazy" /></div>
                   <div className="p-8 md:p-12 flex flex-col justify-center [direction:ltr]">
                     <span className="w-11 h-11 rounded-2xl grid place-items-center bg-[#0A1A3C] text-[#E8C97A] font-display font-bold text-lg">0{i + 1}</span>
                     <h3 className="mt-4 font-display text-2xl md:text-3xl text-[#0A1A3C] font-semibold">{s.t}</h3>

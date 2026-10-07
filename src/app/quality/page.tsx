@@ -43,7 +43,7 @@ export default function Quality() {
             ))}
           </div>
           <Reveal className="mt-12 rounded-[28px] overflow-hidden relative">
-            <img src={IMAGES.luxuryRoom} alt="Hotel quality" className="h-72 w-full object-cover" loading="lazy" />
+            <img src={IMAGES.luxuryRoom} alt="Hotel quality" className="aspect-square w-full object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#060f24]/90 to-transparent flex items-center">
               <p className="px-8 md:px-12 font-display text-2xl md:text-3xl text-white max-w-xl">“If it wouldn&apos;t pass a 5-star laundry, it doesn&apos;t ship.” — QC Head</p>
             </div>

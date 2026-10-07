@@ -34,9 +34,7 @@ export function Preloader() {
   return (
     <div className="fixed inset-0 z-[100] bg-[#060f24] grid place-items-center">
       <div className="text-center">
-        <div className="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-[#C9A24B] to-[#6e5518] grid place-items-center animate-float-slow">
-          <span className="font-display text-4xl font-bold text-[#060f24]">A</span>
-        </div>
+        <img src="/wovica-logo.jpeg" alt="Wovica" className="w-20 h-20 mx-auto rounded-full object-cover border-2 border-[#C9A24B]/70 shadow-2xl animate-float-slow bg-white" />
         <p className="mt-5 font-display tracking-[0.35em] text-[#E8C97A] text-sm">APPLA OVERSEAS</p>
         <div className="mt-4 h-[3px] w-44 mx-auto rounded-full bg-white/10 overflow-hidden">
           <div className="h-full w-full bg-gradient-to-r from-[#A8822E] via-[#F4E3B2] to-[#A8822E] animate-shimmer" />

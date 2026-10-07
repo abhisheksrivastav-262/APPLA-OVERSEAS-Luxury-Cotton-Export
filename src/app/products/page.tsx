@@ -2,21 +2,20 @@
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { ProductCard } from "@/components/ProductCard";
-import { CATEGORIES, PRODUCTS, IMAGES } from "@/data/site";
+import { GroupCard } from "@/components/GroupCard";
+import { CATEGORIES, GROUPS } from "@/data/site";
 
 export default function ProductsPage() {
   const [cat, setCat] = useState<string>("All");
   const [q, setQ] = useState("");
-  const list = useMemo(() => PRODUCTS.filter((p) => (cat === "All" || p.category === cat) && (p.title + p.material + p.desc).toLowerCase().includes(q.toLowerCase())), [cat, q]);
+  const list = useMemo(() => GROUPS.filter((p) => (cat === "All" || p.category === cat) && (p.title + p.material + p.desc + p.variants.map((v) => v.name).join(" ")).toLowerCase().includes(q.toLowerCase())), [cat, q]);
 
   return (
     <div className="pt-28">
-      <section className="relative py-16 overflow-hidden">
-        <img src={IMAGES.bedroomBeige} alt="Products" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#060f24]/78" />
+      <section className="relative py-16 overflow-hidden bg-[#060f24]">
+        <div className="absolute inset-0" style={{ background: "radial-gradient(700px 260px at 20% 0%, #C9A24B44, transparent), radial-gradient(600px 240px at 85% 40%, #1A357366, transparent)" }} />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">Catalog • 20+ Export Designs</p>
+          <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">Catalog • 12 Exclusive Designs</p>
           <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold">Product Collection</h1>
           <p className="mt-3 text-white/65 max-w-2xl">Filter by category. Every card shows material, sizes, GSM and MOQ — click inquiry to get a 24-hr quote.</p>
         </div>
@@ -37,9 +36,9 @@ export default function ProductsPage() {
               </div>
             </div>
           </Reveal>
-          <p className="mt-6 text-[13px] text-[#0A1A3C]/55">{list.length} designs • {cat}</p>
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {list.map((p) => <Reveal key={p.slug}><ProductCard p={p} /></Reveal>)}
+          <p className="mt-6 text-[13px] text-[#0A1A3C]/55">{list.length} ranges • {cat} • 15 colours, zero repeats</p>
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+            {list.map((p) => <Reveal key={p.slug}><GroupCard g={p} /></Reveal>)}
           </div>
           {list.length === 0 && <p className="text-center py-20 text-[#0A1A3C]/60">No matches. Try “cotton” or “hotel”.</p>}
         </div>

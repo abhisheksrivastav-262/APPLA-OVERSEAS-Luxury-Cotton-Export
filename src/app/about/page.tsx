@@ -19,7 +19,10 @@ export default function About() {
             <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">About Us • Est. 2006</p>
             <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold max-w-3xl">The house behind the world&apos;s softest cotton.</h1>
             <p className="mt-4 text-white/65 max-w-2xl">Established in 2006 in Muzaffarnagar by {SITE.owner} — 20+ years of textile-sector experience behind Appla Overseas, parent company of flagship premium brand <span className="text-[#E8C97A] font-semibold">Wovica</span>.</p>
-            <div className="mt-6"><WovicaMark /></div>
+            <div className="mt-6 flex items-center gap-3">
+              <img src="/wovica-logo.jpeg" alt="Wovica logo" className="w-14 h-14 rounded-full object-cover border-2 border-[#C9A24B]/60 shadow-lg bg-white" />
+              <div><WovicaMark /><p className="mt-1 text-[12px] tracking-[0.2em] uppercase text-white/50">Flagship Premium Brand</p></div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -51,10 +54,10 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 gap-4">
-              <img src={IMAGES.sewing} alt="Factory" className="rounded-3xl h-64 object-cover lux-card" loading="lazy" />
-              <img src={IMAGES.fabricColor} alt="Textile" className="rounded-3xl h-64 object-cover mt-8 lux-card" loading="lazy" />
-              <img src={IMAGES.warehouse} alt="Warehouse" className="rounded-3xl h-64 object-cover col-span-2" loading="lazy" />
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              <img src={IMAGES.sewing} alt="Factory" className="rounded-3xl aspect-square w-full object-cover lux-card" loading="lazy" />
+              <img src={IMAGES.fabricColor} alt="Textile" className="rounded-3xl aspect-square w-full object-cover mt-6 sm:mt-8 lux-card" loading="lazy" />
+              <img src={IMAGES.warehouse} alt="Warehouse" className="rounded-3xl aspect-square w-full object-cover lux-card" loading="lazy" />
             </div>
           </Reveal>
         </div>

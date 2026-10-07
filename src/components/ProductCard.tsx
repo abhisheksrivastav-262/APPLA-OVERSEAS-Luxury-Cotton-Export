@@ -24,6 +24,12 @@ export function ProductCard({ p }: { p: Product }) {
       <div className="p-6">
         <p className="text-[11px] tracking-[0.25em] uppercase text-[#A8822E] font-semibold">{p.category}</p>
         <h3 className="mt-2 font-display text-[19px] font-semibold text-[#0A1A3C] leading-snug">{p.title}</h3>
+        {p.brandLine && (
+          <div className="mt-1.5">
+            <p className="text-[12px] font-bold tracking-wide text-[#0A1A3C]">{p.brandLine}</p>
+            <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#A8822E]">Premium Quality</p>
+          </div>
+        )}
         <div className="mt-4 grid grid-cols-2 gap-2 text-[12.5px]">
           {[["Material", p.material], ["Sizes", p.sizes], ["GSM / TC", p.gsm], ["MOQ", p.moq]].map(([k, v]) => (
             <div key={k} className="rounded-xl bg-[#FAF8F3] border border-[#C9A24B]/15 px-3 py-2">

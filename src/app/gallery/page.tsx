@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { GALLERY, IMAGES } from "@/data/site";
+import { GALLERY } from "@/data/site";
 
-const CATS = ["All", "Bedsheets", "Comforters", "Protectors", "Factory", "Packaging", "Export Containers"];
+const CATS = ["All", "Bedsheets", "Protectors", "Comforters"];
 
 export default function GalleryPage() {
   const [cat, setCat] = useState("All");
@@ -12,9 +12,8 @@ export default function GalleryPage() {
   const list = GALLERY.filter((g) => cat === "All" || g.cat === cat);
   return (
     <div className="pt-28">
-      <section className="relative py-16 overflow-hidden">
-        <img src={IMAGES.hotelBed} alt="Gallery" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#060f24]/80" />
+      <section className="relative py-16 overflow-hidden bg-[#060f24]">
+        <div className="absolute inset-0" style={{ background: "radial-gradient(700px 260px at 80% 0%, #C9A24B44, transparent), radial-gradient(600px 240px at 15% 40%, #1A357366, transparent)" }} />
         <div className="relative max-w-7xl mx-auto px-6">
           <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">Masonry Gallery</p>
           <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold">Craft, in pictures.</h1>

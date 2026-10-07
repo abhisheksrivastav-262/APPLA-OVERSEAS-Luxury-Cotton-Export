@@ -6,31 +6,14 @@ import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Stats } from "@/components/Stats";
-import { ProductCard, WovicaMark } from "@/components/ProductCard";
+import { GroupCard } from "@/components/GroupCard";
 import { HeroSlider } from "@/components/HeroSlider";
 import { VideoSection } from "@/components/VideoSection";
-import { IMAGES, PRODUCTS, COUNTRIES, TESTIMONIALS, FAQS, SITE, CERTIFICATIONS } from "@/data/site";
+import { IMAGES, GROUPS, COUNTRIES, TESTIMONIALS, FAQS, SITE, CERTIFICATIONS } from "@/data/site";
 
 const fadeUp = { initial: { opacity: 0, y: 34 }, animate: { opacity: 1, y: 0 } };
 
 export default function Home() {
-  const sliderItems = [
-    "signature-400tc-white-bedsheet",
-    "wovika-satin-bedsheet",
-    "down-comforter-500tc",
-    "waterproof-mattress-protector",
-    "wovika-jacquard-bedcover",
-  ].map((s) => PRODUCTS.find((p) => p.slug === s)!).filter(Boolean);
-  const featured = [
-    "wovika-pure-cotton-bedsheet",
-    "down-comforter-500tc",
-    "waterproof-mattress-protector",
-    "wovika-jacquard-bedcover",
-    "hotel-stripe-bedsheet",
-    "terry-pillow-protector-pair",
-    "wovika-percale-bedsheet",
-    "oem-private-label",
-  ].map((s) => PRODUCTS.find((p) => p.slug === s)!).filter(Boolean);
   const [faqOpen, setFaqOpen] = useState<number | null>(0);
 
   return (
@@ -62,7 +45,7 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div {...fadeUp} transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}>
-            <HeroSlider items={sliderItems} />
+            <HeroSlider groups={GROUPS} />
           </motion.div>
         </div>
       </section>
@@ -99,11 +82,11 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-[#FAF8F3]">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <img src={IMAGES.fabric} alt="Cotton fabric" className="rounded-[20px] sm:rounded-[26px] h-48 sm:h-72 w-full object-cover lux-card" loading="lazy" />
-              <img src={IMAGES.sewing} alt="Stitching unit" className="rounded-[20px] sm:rounded-[26px] h-48 sm:h-72 w-full object-cover mt-6 sm:mt-8 lux-card" loading="lazy" />
+            <div className="grid grid-cols-2 gap-4">
+              <img src={IMAGES.fabric} alt="Cotton fabric" className="rounded-[20px] sm:rounded-[26px] aspect-square w-full object-cover lux-card" loading="lazy" />
+              <img src={IMAGES.sewing} alt="Stitching unit" className="rounded-[20px] sm:rounded-[26px] aspect-square w-full object-cover mt-6 sm:mt-8 lux-card" loading="lazy" />
               <div className="col-span-2 rounded-[20px] sm:rounded-[26px] overflow-hidden relative lux-card">
-                <img src={IMAGES.hotel2} alt="Luxury hotel bedding" className="h-48 sm:h-56 w-full object-cover" loading="lazy" />
+                <img src={IMAGES.hotel2} alt="Luxury hotel bedding" className="aspect-square w-full object-cover" loading="lazy" />
                 <div className="absolute bottom-4 left-4 glass rounded-2xl px-5 py-3 border border-[#C9A24B]/30">
                   <p className="font-display text-2xl font-bold text-[#0A1A3C]">20+ Years</p>
                   <p className="text-[11px] tracking-[0.2em] uppercase text-[#A8822E]">Since 2006 • Export Excellence</p>
@@ -132,12 +115,12 @@ export default function Home() {
       {/* 4. PRODUCT SLIDER */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading eyebrow="Signature Collection" title="Luxury pieces global buyers reorder" sub="Export-tested luxury pieces across bedsheets, comforters, protectors and hotel systems." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featured.map((p) => <Reveal key={p.slug}><ProductCard p={p} /></Reveal>)}
+          <SectionHeading eyebrow="Signature Collection" title="4 ranges, 15 colours — no repeats" sub="Har range me photos ek line me, ek hi naam. Colour chuno, Buy Now dabao." />
+          <div className="grid md:grid-cols-2 gap-6">
+            {GROUPS.map((p) => <Reveal key={p.slug}><GroupCard g={p} /></Reveal>)}
           </div>
           <div className="text-center mt-10">
-            <Link href="/products" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0A1A3C] text-[#E8C97A] font-semibold hover:-translate-y-0.5 transition-transform">View All 20+ Products <ArrowRight size={18} /></Link>
+            <Link href="/products" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0A1A3C] text-[#E8C97A] font-semibold hover:-translate-y-0.5 transition-transform">View Full Collection <ArrowRight size={18} /></Link>
           </div>
         </div>
       </section>
@@ -185,7 +168,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative">
-              <img src={IMAGES.cottonFold} alt="Cotton production" className="rounded-[30px] h-[560px] w-full object-cover lux-card" loading="lazy" />
+              <img src={IMAGES.cottonFold} alt="Cotton production" className="rounded-[30px] aspect-square w-full object-cover lux-card" loading="lazy" />
               <div className="absolute -bottom-6 -left-4 md:-left-8 glass rounded-3xl px-7 py-5 border border-[#C9A24B]/30 shadow-2xl">
                 <p className="font-display text-3xl font-bold text-[#0A1A3C]">100K+ units</p>
                 <p className="text-[12px] tracking-[0.2em] uppercase text-[#A8822E]">Monthly Capacity</p>
@@ -217,7 +200,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="rounded-[30px] overflow-hidden lux-card relative">
-              <img src={IMAGES.containersAerial} alt="Export containers" className="h-[440px] w-full object-cover" loading="lazy" />
+              <img src={IMAGES.containersAerial} alt="Export containers" className="aspect-square w-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#060f24]/80 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 glass rounded-2xl p-5 border border-[#C9A24B]/30 flex items-center gap-4">
                 <Globe2 className="text-[#0A1A3C]" size={30} />
@@ -231,14 +214,14 @@ export default function Home() {
       {/* 9. HOTEL SHOWCASE */}
       <section className="py-20 md:py-28 bg-[#060f24] grain relative">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading dark eyebrow="Hotel Linen Showcase" title="Bedding guests photograph" sub="Crisp whites, stripe dobbies and duvet systems trusted by hospitality groups." />
+          <SectionHeading dark eyebrow="Wovica Satin Showcase" title="Satin pieces in real homes" sub="Midnight navy, sterling grey and charcoal medallion — premium quality satin bedsheets." />
           <div className="grid md:grid-cols-3 gap-6">
             {[IMAGES.hotel1, IMAGES.hotel2, IMAGES.hotelBed].map((src, i) => (
               <Reveal key={src} delay={i * 0.1}>
-                <div className="rounded-[28px] overflow-hidden img-zoom border border-[#C9A24B]/25 h-80 relative group">
+                <div className="rounded-[28px] overflow-hidden border border-[#C9A24B]/25 aspect-square relative group">
                   <img src={src} alt="Hotel bedding" className="w-full h-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#060f24]/85 via-transparent to-transparent" />
-                  <p className="absolute bottom-5 left-5 right-5 text-white font-display text-lg">{["Executive Suite Whites", "Signature Stripe Dobby", "Cloud Duvet System"][i]}</p>
+                  <p className="absolute bottom-5 left-5 right-5 text-white font-display text-lg">{["Midnight Navy Satin", "Sterling Grey Satin", "Charcoal Medallion Satin"][i]}</p>
                 </div>
               </Reveal>
             ))}
@@ -277,7 +260,7 @@ export default function Home() {
                   <div className="flex gap-1 text-[#C9A24B]">{[...Array(5)].map((_, s) => <Star key={s} size={15} fill="currentColor" />)}</div>
                   <p className="mt-4 text-[14px] text-[#0A1A3C]/75 leading-relaxed flex-1">“{t.text}”</p>
                   <div className="mt-5 flex items-center gap-3">
-                    <img src={t.image} alt={t.name} className="w-11 h-11 rounded-full object-cover border-2 border-[#C9A24B]/40" loading="lazy" />
+                    <span className="w-11 h-11 rounded-full grid place-items-center font-display font-bold text-lg bg-[#0A1A3C] text-[#E8C97A] border-2 border-[#C9A24B]/40 shrink-0">{t.name.charAt(0)}</span>
                     <div><p className="font-semibold text-[14px] text-[#0A1A3C]">{t.name}</p><p className="text-[12px] text-[#0A1A3C]/55">{t.role}</p></div>
                   </div>
                 </div>

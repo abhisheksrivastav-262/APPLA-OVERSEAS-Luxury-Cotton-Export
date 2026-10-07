@@ -2,18 +2,18 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ProductCard, WovicaMark } from "@/components/ProductCard";
-import { BEDSHEET_TYPES, PRODUCTS, IMAGES, SITE } from "@/data/site";
+import { WovicaMark } from "@/components/ProductCard";
+import { GroupCard } from "@/components/GroupCard";
+import { BEDSHEET_TYPES, GROUPS, SITE } from "@/data/site";
 
 export const metadata = { title: "Types of Bedsheets | Wovica – APPLA OVERSEAS", description: "Premium pure cotton, satin, percale, combed cotton, silk & microfiber bedsheets – manufacturer & exporter." };
 
 export default function BedsheetsPage() {
-  const sheets = PRODUCTS.filter((p) => p.category === "Bedsheets");
+  const sheets = GROUPS.filter((p) => p.category === "Bedsheets");
   return (
     <div className="pt-28">
-      <section className="relative py-16 overflow-hidden">
-        <img src={IMAGES.heroBed2} alt="Types of bedsheets" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#060f24]/80" />
+      <section className="relative py-16 overflow-hidden bg-[#060f24]">
+        <div className="absolute inset-0" style={{ background: "radial-gradient(700px 260px at 15% 0%, #C9A24B44, transparent), radial-gradient(600px 240px at 85% 45%, #1A357366, transparent)" }} />
         <div className="relative max-w-7xl mx-auto px-6">
           <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-[#C9A24B]/40 text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase"><WovicaMark small /> Bedsheet Guide</span>
@@ -45,9 +45,9 @@ export default function BedsheetsPage() {
 
       <section className="py-16 bg-[#FAF8F3]">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading eyebrow="Shop" title="All bedsheet products" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sheets.map((p) => <Reveal key={p.slug}><ProductCard p={p} /></Reveal>)}
+          <SectionHeading eyebrow="Shop" title="Bedsheet ranges — 4 colours each" />
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {sheets.map((p) => <Reveal key={p.slug}><GroupCard g={p} /></Reveal>)}
           </div>
           <div className="text-center mt-10">
             <Link href={`/quote`} className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0A1A3C] text-[#E8C97A] font-semibold">Bulk Inquiry for {SITE.brand} Bedsheets <ArrowRight size={18} /></Link>

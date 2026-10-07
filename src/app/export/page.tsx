@@ -61,7 +61,7 @@ export default function ExportPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="rounded-[30px] overflow-hidden border border-[#C9A24B]/30">
-              <img src={IMAGES.containers} alt="Containers" className="h-[420px] w-full object-cover" loading="lazy" />
+              <img src={IMAGES.containers} alt="Containers" className="aspect-square w-full object-cover" loading="lazy" />
             </div>
           </Reveal>
         </div>
