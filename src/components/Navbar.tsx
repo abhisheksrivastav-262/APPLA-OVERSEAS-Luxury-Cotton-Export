@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X, Phone, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { SITE } from "@/data/site";
 
 const LINKS = [
@@ -99,14 +99,11 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="flex lg:hidden items-center gap-2">
-            <a href={SITE.phoneHref} aria-label="Call APPLA Overseas" className="w-11 h-11 grid place-items-center rounded-full bg-[#0A1A3C] text-[#E8C97A] border border-[#C9A24B]/40 shadow-md active:scale-95 transition-transform">
-              <Phone size={18} />
-            </a>
-            <button onClick={() => setOpen(true)} aria-label="Open menu" className="w-11 h-11 grid place-items-center rounded-full bg-[#0A1A3C] text-[#E8C97A] border border-[#C9A24B]/40 shadow-md active:scale-95 transition-transform">
-              <Menu size={20} />
-            </button>
-          </div>
+        <div className="flex lg:hidden items-center">
+          <button onClick={() => setOpen(true)} aria-label="Open menu" className="w-11 h-11 grid place-items-center rounded-full bg-[#0A1A3C] text-[#E8C97A] border border-[#C9A24B]/40 shadow-md active:scale-95 transition-transform">
+            <Menu size={20} />
+          </button>
+        </div>
         </nav>
       </header>
 

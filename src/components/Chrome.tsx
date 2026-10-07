@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ArrowUp, MessageCircle } from "lucide-react";
+import { ArrowUp, MessageCircle, Phone } from "lucide-react";
 import { SITE } from "@/data/site";
 
 export function Floating() {
@@ -12,10 +12,16 @@ export function Floating() {
   }, []);
   return (
     <>
-      <a href={SITE.whatsapp} target="_blank" aria-label="WhatsApp"
-        className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 w-14 h-14 rounded-full grid place-items-center bg-[#25D366] text-white shadow-[0_16px_40px_-10px_rgba(37,211,102,0.7)] hover:scale-110 active:scale-95 transition-transform pulse-glow" style={{ marginBottom: "env(safe-area-inset-bottom)" }}>
-        <MessageCircle size={26} />
-      </a>
+      <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3" style={{ marginBottom: "env(safe-area-inset-bottom)" }}>
+        <a href={SITE.phoneHref} aria-label="Call APPLA Overseas"
+          className="w-14 h-14 rounded-full grid place-items-center bg-[#0A1A3C] text-[#E8C97A] border-2 border-[#C9A24B]/60 shadow-[0_16px_40px_-10px_rgba(10,26,60,0.8)] hover:scale-110 active:scale-95 transition-transform">
+          <Phone size={24} />
+        </a>
+        <a href={SITE.whatsapp} target="_blank" aria-label="WhatsApp"
+          className="w-14 h-14 rounded-full grid place-items-center bg-[#25D366] text-white shadow-[0_16px_40px_-10px_rgba(37,211,102,0.7)] hover:scale-110 active:scale-95 transition-transform pulse-glow">
+          <MessageCircle size={26} />
+        </a>
+      </div>
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top"
         className={`fixed bottom-5 left-5 sm:bottom-6 sm:left-6 z-50 w-12 h-12 rounded-full grid place-items-center bg-[#0A1A3C] text-[#E8C97A] border border-[#C9A24B]/40 shadow-xl transition-all hover:-translate-y-1 active:scale-95 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
         <ArrowUp size={20} />
