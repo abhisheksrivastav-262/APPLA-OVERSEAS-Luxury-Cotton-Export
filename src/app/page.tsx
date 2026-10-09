@@ -26,6 +26,9 @@ export default function Home() {
             <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-[#C9A24B]/40 text-[#E8C97A] text-[12px] tracking-[0.25em] uppercase">
               <BadgeCheck size={15} /> Appla Overseas • Leading Home Textile Manufacturer & Exporter
             </p>
+            <p className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#A8822E] to-[#E8C97A] text-[#060f24] text-[12.5px] font-bold tracking-[0.15em] uppercase shadow-[0_10px_30px_-10px_rgba(201,162,75,0.8)]">
+              20+ Years Experience in Manufacturing Textile Sector
+            </p>
             <h1 className="mt-6 font-display text-white text-[34px] sm:text-[42px] md:text-[60px] leading-[1.08] font-semibold text-balance">
               Premium Cotton Textile <span className="gold-text">Manufacturer</span> & Exporter
             </h1>
