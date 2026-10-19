@@ -5,7 +5,11 @@ export const SITE = {
   brandLine: "Wovica — Our Premium Home Textile Range",
   brandQuote:
     "Appla Overseas is a world-class textile manufacturing company committed to global quality standards. Under our premium brand Wovica, we bring an exquisite range of bedsheets, comforters, protectors, and bedcovers crafted for international markets.",
-  owner: "Ravindra Singhwal",
+  owner: "Ravi Singhwal & Ravindra Singhwal",
+  founders: [
+    { name: "Ravi Singhwal", role: "Owner & Founder" },
+    { name: "Ravindra Singhwal", role: "Owner & Founder" }
+  ],
   founded: 2006,
   experience: "20+ Years",
   tagline: "Crafting Premium Cotton Comfort for the World",
@@ -221,6 +225,13 @@ export const BEDSHEET_TYPES = [
 ];
 
 export const GALLERY = [
+  {
+    src: "/products/wovica-brand-video.mp4",
+    poster: "/products/wovica-video-poster.jpg",
+    cat: "Manufacturing",
+    title: "Inside Factory Floor & Weaving",
+    type: "video" as const,
+  },
   { src: "/products/wovica-rustic-rose.jpeg", cat: "Bedsheets", title: "Rustic Rose Set" },
   { src: "/products/wovica-marigold-meadow.jpeg", cat: "Bedsheets", title: "Marigold Meadow Set" },
   { src: "/products/wovica-teal-blossom.jpeg", cat: "Bedsheets", title: "Teal Blossom Set" },

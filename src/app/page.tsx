@@ -100,7 +100,7 @@ export default function Home() {
           <Reveal delay={0.1}>
             <p className="text-[12px] tracking-[0.3em] uppercase text-[#A8822E] font-semibold">About APPLA Overseas</p>
             <h2 className="mt-3 font-display text-3xl md:text-[46px] leading-tight text-[#0A1A3C] font-semibold">Muzaffarnagar craftsmanship, <span className="gold-text">world-class</span> bedding.</h2>
-            <p className="mt-5 text-[#0A1A3C]/65 leading-relaxed">Since 2006, led by Ravindra Singhwal, APPLA OVERSEAS manufactures pure-cotton bedsheets, comforters, mattress & pillow protectors and complete hotel linen systems — engineered for importers, retailers and hospitality groups.</p>
+            <p className="mt-5 text-[#0A1A3C]/65 leading-relaxed">Founded in 2006 by Company Owners & Founders <strong>Ravi Singhwal</strong> and <strong>Ravindra Singhwal</strong>, APPLA OVERSEAS manufactures pure-cotton bedsheets, comforters, mattress & pillow protectors and complete hotel linen systems — engineered for importers, retailers and hospitality groups.</p>
             <div className="mt-7 grid sm:grid-cols-2 gap-4">
               {[[Factory, "In-house stitching", "Cut-to-pack under one roof"], [ShieldCheck, "Export QA lab", "4-point + GSM + fastness checks"], [Leaf, "Responsible cotton", "BCI & eco-dye options"], [Truck, "Global logistics", "FOB / CIF / DDP + documents"]].map(([Icon, t, d]: any) => (
                 <div key={t as string} className="rounded-2xl bg-white border border-[#C9A24B]/20 p-5 hover:shadow-xl transition-shadow">

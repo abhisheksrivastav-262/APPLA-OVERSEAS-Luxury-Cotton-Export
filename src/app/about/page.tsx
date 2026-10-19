@@ -18,7 +18,7 @@ export default function About() {
           <Reveal>
             <p className="text-[12px] tracking-[0.3em] uppercase text-[#E8C97A]">About Us • Est. 2006</p>
             <h1 className="mt-3 font-display text-4xl md:text-6xl text-white font-semibold max-w-3xl">The house behind the world&apos;s softest cotton.</h1>
-            <p className="mt-4 text-white/65 max-w-2xl">Established in 2006 in Muzaffarnagar by {SITE.owner} — 20+ years of textile-sector experience behind Appla Overseas, parent company of flagship premium brand <span className="text-[#E8C97A] font-semibold">Wovica</span>.</p>
+            <p className="mt-4 text-white/65 max-w-2xl">Established in 2006 in Muzaffarnagar by Company Owners & Founders <strong className="text-white">Ravi Singhwal</strong> and <strong className="text-white">Ravindra Singhwal</strong> — 20+ years of textile-sector experience behind APPLA OVERSEAS, parent company of flagship premium brand <span className="text-[#E8C97A] font-semibold">Wovica</span>.</p>
             <div className="mt-6 flex items-center gap-3">
               <img src="/wovica-logo.jpeg" alt="Wovica logo" className="w-14 h-14 rounded-full object-cover border-2 border-[#C9A24B]/60 shadow-lg bg-white" />
               <div><WovicaMark /><p className="mt-1 text-[12px] tracking-[0.2em] uppercase text-white/50">Flagship Premium Brand</p></div>
@@ -60,6 +60,29 @@ export default function About() {
               <img src={IMAGES.warehouse} alt="Warehouse" className="rounded-3xl aspect-square w-full object-cover lux-card" loading="lazy" />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Leadership & Founders Section */}
+      <section className="py-20 bg-white border-b border-[#C9A24B]/15">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading eyebrow="Leadership" title="Company Owners & Founders" sub="The visionaries and textile industry pioneers behind APPLA OVERSEAS & Wovica." />
+          <div className="mt-12 grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {SITE.founders.map((founder, idx) => (
+              <Reveal key={founder.name} delay={idx * 0.1}>
+                <div className="rounded-[28px] bg-[#FAF8F3] border border-[#C9A24B]/30 p-8 text-center lux-card relative overflow-hidden group hover:border-[#C9A24B] transition-all">
+                  <div className="mx-auto w-20 h-20 rounded-full bg-[#0A1A3C] border-2 border-[#C9A24B] grid place-items-center text-[#E8C97A] font-display text-2xl font-bold shadow-md group-hover:scale-105 transition-transform">
+                    {founder.name.split(" ").map((n) => n[0]).join("")}
+                  </div>
+                  <h3 className="mt-5 font-display text-2xl text-[#0A1A3C] font-semibold">{founder.name}</h3>
+                  <p className="mt-1 text-[13px] tracking-[0.2em] uppercase font-semibold text-[#A8822E]">{founder.role}</p>
+                  <p className="mt-3 text-[14px] text-[#0A1A3C]/70 leading-relaxed">
+                    Driving manufacturing excellence, export relations, and pioneering quality cotton bedding for international and domestic markets since 2006.
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

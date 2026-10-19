@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-white/45">
           <p>Copyright © 2026 APPLA OVERSEAS. All Rights Reserved.</p>
-          <p>Owner: {SITE.owner} • Muzaffarnagar, India</p>
+          <p>Owners & Founders: {SITE.owner} • Muzaffarnagar, India</p>
         </div>
       </div>
     </footer>
